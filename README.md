@@ -1,4 +1,4 @@
-# CDA-3103-Project
+# 4331-small-project
 
 If this is your first time using github, use the following links:
 
