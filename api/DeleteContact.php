@@ -4,14 +4,14 @@
 	$userId = $inData["userId"];
 	$contactId = $inData["contactId"];
 
-	$conn = new mysqli("localhost", "UserName", "Password", "DataBase-Name"); //change this if needed
+	$conn = new mysqli("localhost", "UserName", "Password", "COP4331"); //change this if needed
 	if ($conn->connect_error) 
 	{
 		returnWithError( $conn->connect_error );
 	} 
 	else
 	{
-		$stmt = $conn->prepare("DELETE FROM Contacts WHERE UserId=? AND ContactId=?");
+		$stmt = $conn->prepare("DELETE FROM Contacts WHERE UserID=? AND ID=?");
 		$stmt->bind_param("ii", $userId, $contactId);
 		$stmt->execute();
 		$stmt->close();
