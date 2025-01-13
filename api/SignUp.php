@@ -1,10 +1,10 @@
 <?php
 
 	$inData = getRequestInfo();
-	
-	$id = 0;
-	$firstName = "";
-	$lastName = "";
+	$username = $inData["username"];
+	$password = $inData["password"];
+	$fname = $inData["firstName"];
+	$lname = $inData["lastName"];
 
 	$conn = new mysqli("localhost", "UserName", "Password", "COP4331"); //change this if needed
 	if( $conn->connect_error )
@@ -17,16 +17,19 @@
 		$stmt = $conn->prepare("SELECT ID,FirstName,LastName FROM Users WHERE Username=? AND Password=?");
 		$stmt->bind_param("ss", $inData["username"], $inData["password"]);
 		$stmt->execute();
-		$result = $stmt->get_result();
+		
 
 		if( $row = $result->fetch_assoc()  )
 		{
-		    //if user exists, send that information to the developer on the front end
-			returnWithInfo( $row['FirstName'], $row['LastName'], $row['ID'] );
+		    //if user exists, send an error message
+			returnWithError("User Already Exists");
 		}
 		else
 		{
-			returnWithError("No Records Found");
+		    //if it is entirely a new user, add the user to the database
+			$stmt = $conn->prepare("INSERST INTO Users (Username,Password,FirstName,LastName) VALUES(?,?,?,?)");
+		    $stmt->bind_param("ssss", $username, $password, $fname, $lname);
+		    $stmt->execute();
 		}
 
 		$stmt->close();
@@ -47,12 +50,6 @@
 	function returnWithError( $err )
 	{
 		$retValue = '{"id":0,"firstName":"","lastName":"","error":"' . $err . '"}';
-		sendResultInfoAsJson( $retValue );
-	}
-	
-	function returnWithInfo( $firstName, $lastName, $id )
-	{
-		$retValue = '{"id":' . $id . ',"firstName":"' . $firstName . '","lastName":"' . $lastName . '","error":""}';
 		sendResultInfoAsJson( $retValue );
 	}
 	

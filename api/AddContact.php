@@ -7,14 +7,14 @@
 	$phone = $inData["phone"];
 	$email = $inData["email"];
 
-	$conn = new mysqli("localhost", "UserName", "Password", "DataBase-Name"); //change this if needed
+	$conn = new mysqli("localhost", "UserName", "Password", "COP4331"); //change this if needed
 	if ($conn->connect_error) 
 	{
 		returnWithError( $conn->connect_error );
 	} 
 	else
 	{
-		$stmt = $conn->prepare("INSERT INTO Contacts (UserId,FirstName,LastName,Phone,Email) VALUES(?,?,?,?,?)");
+		$stmt = $conn->prepare("INSERT INTO Contacts (UserID,FirstName,LastName,Phone,Email) VALUES(?,?,?,?,?)");
 		$stmt->bind_param("issss", $userId, $fname, $lname, $phone, $email);
 		$stmt->execute();
 		$stmt->close();
