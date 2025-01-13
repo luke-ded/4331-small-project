@@ -7,7 +7,7 @@
 	$phone = $inData["phone"];
 	$email = $inData["email"];
 
-	$conn = new mysqli("localhost", "UserName", "Password", "COP4331"); //change this if needed
+	$conn = new mysqli("localhost", "root", "&&C0P##4331##Pr0ject&&s", "COP4331"); //change this if needed
 	if ($conn->connect_error) 
 	{
 		returnWithError( $conn->connect_error );
