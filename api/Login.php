@@ -1,6 +1,8 @@
 <?php
 
 	$inData = getRequestInfo();
+	$userName = $inData["loginName"];
+	$password = $inData["loginPassword"];
 	
 	$id = 0;
 
@@ -12,8 +14,8 @@
 	else
 	{
 	    //Find the user in the table Users based on the given Username and Password, where both should be string values
-		$stmt = $conn->prepare("SELECT ID FROM Users WHERE Username=? AND Password=?");
-		$stmt->bind_param("ss", $inData["username"], $inData["password"]);
+		$stmt = $conn->prepare("SELECT ID FROM Users WHERE Login=? AND Password=?");
+		$stmt->bind_param("ss", $userName, $password);
 		$stmt->execute();
 		$result = $stmt->get_result();
 
