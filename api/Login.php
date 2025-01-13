@@ -14,7 +14,7 @@
 	else
 	{
 	    //Find the user in the table Users based on the given Username and Password, where both should be string values
-		$stmt = $conn->prepare("SELECT UserId,FirstName,LastName FROM Users WHERE Username=? AND Password =?");
+		$stmt = $conn->prepare("SELECT UserId,FirstName,LastName FROM Users WHERE Username=? AND Password=?");
 		$stmt->bind_param("ss", $inData["username"], $inData["password"]);
 		$stmt->execute();
 		$result = $stmt->get_result();
