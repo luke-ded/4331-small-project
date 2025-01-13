@@ -14,7 +14,7 @@
             <h2 class="logo">WebsiteName</h2>
         </div>
 
-        <button id="signupBtn" class ="signupbutton">Sign Up</button>
+        <button id="signupBtn" class ="signupbutton">Sign up</button>
 
         <script type="text/javascript">
         document.getElementById("signupBtn").onclick = function()
@@ -23,13 +23,22 @@
         }
         </script>
 
-        <button id = "loginBtn" class="loginbuttoneng">Log In</button>
+        <button id = "loginBtn" class="loginbuttoneng">Log in</button>
         <script type="text/javascript">
         document.getElementById("loginBtn").onclick = function()
         {
             location.href = "index.html";
         }
         </script>
+
+    <div class="loginDiv">
+        <span id="inner-title">Log In</span>
+        <input type="text" id="loginName" placeholder="Username" /><br />
+        <input type="password" id="loginPassword" placeholder="Password"/><br />
+        <button type="button" id="doLoginButton" class="dologinbutton" onclick="doLogin();"> Log in </button>
+        <span id="loginResult"></span>
+    </div>
+
     </div>
 </body>
 </html>

@@ -103,7 +103,7 @@
     color:rgb(0, 157, 255);
     border-color: rgb(0, 157, 255);
 }
-/* #title 
+#title 
 {
     font-size: 40px;
     width: 100%;
@@ -113,13 +113,65 @@
     color: #FFFFFF;
 }
 
-#loginDiv
+.loginDiv
 {
-    font-size: 30px;
-    width: 70%;
-    margin-left: 15%;
+    font-size: 40px;
+    text-align: center;
+    width: 20%;
+    height: 27%;
+    margin-left: 32%;
     padding: 25px;
-    background-color: #b3b3b3;
+    background-color: rgb(22, 23, 33,.7);
+    border: 1px solid aquamarine;
+    border-radius: 20px;
+    margin-top: 15%;
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    margin:auto;
+}
+
+.signupDiv
+{
+    font-size: 40px;
+    text-align: center;
+    width: 20%;
+    height: 38%;
+    margin-left: 32%;
+    padding: 25px;
+    background-color: rgb(22, 23, 33,.7);
+    border: 1px solid aquamarine;
+    border-radius: 20px;
+    margin-top: 15%;
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    margin:auto;
+}
+
+.dologinbutton
+{
+    color:aquamarine;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    background:transparent;
+    border: 1px solid aquamarine;
+    float:right;
+    font-size: 20px;
+    border-radius: 5px;
+
+    margin-top: 20px;
+    margin-right: 38%;
+}
+
+.dologinbutton:hover
+{
+    color:rgb(0, 157, 255);
+    border-color: rgb(0, 157, 255);
 }
 
 #loggedInDiv
@@ -155,13 +207,29 @@
     opacity: 50%;
 }
 
+#firstName
+{
+    font-size: 25px;
+    margin-right:10%;
+}
+#lastName
+{
+    margin-top:5%;
+    font-size: 25px;
+    margin-right:10%;
+}
 #loginName
 {
-	font-size: 30px;
+    margin-top:5%;
+	font-size: 25px;
+    margin-right:10%;
 }
 #loginPassword
 {
-	font-size: 30px;
+    margin-top:5%;
+    margin-right:10%;
+	font-size: 25px;
+    
 }
 #searchText
 {
@@ -188,8 +256,10 @@ input[type="text"],input[type="password"]{
     text-align: center;
     margin-left: 5%;
     margin-bottom: 2%;
+
     font-family: Arial, Helvetica, sans-serif;
-    color: #95060a;
+    font-weight: 600;
+    color: rgb(0, 157, 255);
 }
 
 #loginResult{
@@ -238,4 +308,4 @@ select{
     font-family: Arial, Helvetica, sans-serif;
     color: #95060a;
 }
- */
+ 
