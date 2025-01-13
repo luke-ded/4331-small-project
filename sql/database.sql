@@ -14,11 +14,13 @@ CREATE TABLE `COP4331`.`Contacts`
      PRIMARY KEY (`ID`)
 ) ENGINE = InnoDB;
 
-ALTER TABLE Contacts 
-    -> DROP COLUMN UserID;
+CREATE TABLE 'COP4331'.'Users' (
+    
+    `UserID` INT NOT NULL AUTO_INCREMENT ,
+    `Login` VARCHAR(50) NOT NULL DEFAULT '' ,
+    `Password` VARCHAR(50) NOT NULL DEFAULT '' ,
+     PRIMARY KEY (`ID`)
+) ENGINE = InnoDB;
 
-ALTER TABLE Contacts
-    -> ADD LoginName varchar(50);
 
-ALTER TABLE Contacts
-    -> ADD LoginPassword varchar(50);
+    
