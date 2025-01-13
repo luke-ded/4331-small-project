@@ -22,7 +22,7 @@
 		if( $row = $result->fetch_assoc()  )
 		{
 		    //if user exists, send that information to the developer on the front end
-			returnWithInfo( $row['FirstName'], $row['LastName'], $row['UserID'] );
+			returnWithInfo( $row['FirstName'], $row['LastName'], $row['ID'] );
 		}
 		else
 		{
