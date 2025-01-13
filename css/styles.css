@@ -1,15 +1,115 @@
-body 
-{
-    background-color: #707070;
+*{
+    margin:0;
+    padding:0;
 }
 
-#title 
+
+.main
+{
+    width:100%;
+    background: linear-gradient(to top, transparent, 35%, rgb(0, 0, 0)), url("../images/istock.jpg");
+    background-position: center;
+    background-size: cover;
+    height:100vh;
+}
+
+.header
+{
+    width: 100%;
+    height: 80px;
+    margin: auto;
+} 
+
+.icon
+{
+    width:200px;
+    float:left;
+    height:70px;
+}
+
+.logo
+{
+    color:aquamarine;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.loginbutton
+{
+    color:aquamarine;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    background:transparent;
+    border: 1px solid aquamarine;
+    float:right;
+    font-size: 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-right:20px;
+}
+
+.loginbuttoneng
+{
+    color:rgb(0, 157, 255);
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    background:transparent;
+    border: 1px solid rgb(0, 157, 255);
+    float:right;
+    font-size: 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-right:20px;
+}
+
+.loginbutton:hover
+{
+    color:rgb(0, 157, 255);
+    border-color: rgb(0, 157, 255);
+}
+
+.signupbutton
+{
+    color:aquamarine;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    background:transparent;
+    border: 1px solid aquamarine;
+    float:right;
+    font-size: 20px;
+    border-radius: 5px;
+
+    margin-top: 10px;
+    margin-right: 20px;
+
+}
+
+.signupbuttoneng
+{
+    color:rgb(0, 157, 255);
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    background:transparent;
+    border: 1px solid rgb(0, 157, 255);
+    float:right;
+    font-size: 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-right:20px;
+}
+
+.signupbutton:hover
+{
+    color:rgb(0, 157, 255);
+    border-color: rgb(0, 157, 255);
+}
+/* #title 
 {
     font-size: 40px;
     width: 100%;
     margin: 2% 5%;
     text-align: center;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     color: #FFFFFF;
 }
 
@@ -19,7 +119,7 @@ body
     width: 70%;
     margin-left: 15%;
     padding: 25px;
-    background-color: #b2b2b2;
+    background-color: #b3b3b3;
 }
 
 #loggedInDiv
@@ -46,7 +146,7 @@ body
     border-radius: 25px;
     width: 50%;
     margin-left: 25%;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .buttons:hover{
@@ -78,7 +178,7 @@ input[type="text"],input[type="password"]{
     width: 80%;
     margin-left: 10%;
     margin-bottom: 2%;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #inner-title{
@@ -88,7 +188,7 @@ input[type="text"],input[type="password"]{
     text-align: center;
     margin-left: 5%;
     margin-bottom: 2%;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     color: #95060a;
 }
 
@@ -99,7 +199,7 @@ input[type="text"],input[type="password"]{
     text-align: center;
     margin-left: 5%;
     margin-bottom: 2%;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     color: #95060a;
 }
 
@@ -120,7 +220,7 @@ select{
     margin-left: 35%;
     margin-top: 2%;
     font-size: 0.75em;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #colorSearchResult{
@@ -135,6 +235,7 @@ select{
     margin-left: 5%;
     margin-top: 2%;
     margin-bottom: 1%;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     color: #95060a;
 }
+ */
