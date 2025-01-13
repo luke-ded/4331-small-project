@@ -1,20 +1,21 @@
 <?php
 
 	$inData = getRequestInfo();
+	$userId = $inData["userId"];
 	
 	$searchResults = "";
 	$searchCount = 0;
 
-	$conn = new mysqli("localhost", "UserName", "Password", "DataBase-Name"); //change this if needed
+	$conn = new mysqli("localhost", "UserName", "Password", "COP4331"); //change this if needed
 	if ($conn->connect_error) 
 	{
 		returnWithError( $conn->connect_error );
 	} 
 	else
 	{
-		$stmt = $conn->prepare("SELECT * FROM Contacts WHERE FirstName LIKE ? OR LastName LIKE ? OR Phone LIKE ? OR Email LIKE ? AND UserId=?");
+		$stmt = $conn->prepare("SELECT * FROM Contacts WHERE (FirstName LIKE ? OR LastName LIKE ? OR Phone LIKE ? OR Email LIKE ?) AND UserID=?");
 		$searchColVal = $inData["searchColVal"] . "%";
-		$stmt->bind_param("ssssi", $searchColVal, $searchColVal, $searchColVal, $searchColVal, $inData["userId"]);
+		$stmt->bind_param("ssssi", $searchColVal, $searchColVal, $searchColVal, $searchColVal, $userId);
 		$stmt->execute();
 		
 		$result = $stmt->get_result();
