@@ -6,14 +6,14 @@
 	$updatedCol = $inData["updateColName"];
 	$updatedColVal = $inData["updateColVal"];
 
-	$conn = new mysqli("localhost", "UserName", "Password", "DataBase-Name"); //change this if needed
+	$conn = new mysqli("localhost", "UserName", "Password", "COP4331"); //change this if needed
 	if ($conn->connect_error) 
 	{
 		returnWithError( $conn->connect_error );
 	} 
 	else
 	{
-		$stmt = $conn->prepare("UPDATE Contacts SET $updatedCol=? WHERE UserId=? AND ContactId=?");
+		$stmt = $conn->prepare("UPDATE Contacts SET $updatedCol=? WHERE UserID=? AND ID=?");
 		$stmt->bind_param("sii", $updatedColVal, $userId, $contactId);
 		$stmt->execute();
 		$stmt->close();
