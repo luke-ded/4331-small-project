@@ -1,12 +1,12 @@
 <?php
 
 	$inData = getRequestInfo();
+	$userName = $inData["loginName"];
+	$password = $inData["loginPassword"];
 	
 	$id = 0;
-	$firstName = "";
-	$lastName = "";
 
-	$conn = new mysqli("localhost", "UserName", "Password", "COP4331"); //change this if needed
+	$conn = new mysqli("localhost", "root", "&&C0P##4331##Pr0ject&&s", "COP4331"); //change this if needed
 	if( $conn->connect_error )
 	{
 		returnWithError( $conn->connect_error );
@@ -14,15 +14,15 @@
 	else
 	{
 	    //Find the user in the table Users based on the given Username and Password, where both should be string values
-		$stmt = $conn->prepare("SELECT ID,FirstName,LastName FROM Users WHERE Username=? AND Password=?");
-		$stmt->bind_param("ss", $inData["username"], $inData["password"]);
+		$stmt = $conn->prepare("SELECT ID FROM Users WHERE Login=? AND Password=?");
+		$stmt->bind_param("ss", $userName, $password);
 		$stmt->execute();
 		$result = $stmt->get_result();
 
 		if( $row = $result->fetch_assoc()  )
 		{
 		    //if user exists, send that information to the developer on the front end
-			returnWithInfo( $row['FirstName'], $row['LastName'], $row['ID'] );
+			returnWithInfo( $row['ID'] );
 		}
 		else
 		{
@@ -46,13 +46,13 @@
 	
 	function returnWithError( $err )
 	{
-		$retValue = '{"id":0,"firstName":"","lastName":"","error":"' . $err . '"}';
+		$retValue = '{"id":0,"error":"' . $err . '"}';
 		sendResultInfoAsJson( $retValue );
 	}
 	
-	function returnWithInfo( $firstName, $lastName, $id )
+	function returnWithInfo( $id )
 	{
-		$retValue = '{"id":' . $id . ',"firstName":"' . $firstName . '","lastName":"' . $lastName . '","error":""}';
+		$retValue = '{"id":' . $id . ',"error":""}';
 		sendResultInfoAsJson( $retValue );
 	}
 	
