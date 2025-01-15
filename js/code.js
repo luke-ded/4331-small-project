@@ -65,6 +65,7 @@ function doSignup()
 	if(!passCheck())
 		return;
 
+
 	userId = 0;
 	firstName = document.getElementById("firstName").value;
 	lastName = document.getElementById("lastName").value;
@@ -79,7 +80,7 @@ function doSignup()
 //	var tmp = {login:login,password:hash};
 	let jsonPayload = JSON.stringify( tmp );
 	
-	let url = urlBase + '/Login.' + extension;
+	let url = urlBase + '/SignUp.' + extension;
 
 	let xhr = new XMLHttpRequest();
 	xhr.open("POST", url, true);
@@ -149,7 +150,7 @@ function readCookie()
 	
 	if( userId < 0 )
 	{
-		//window.location.href = "index.html";
+		window.location.href = "index.html";
 	}
 	else
 	{
