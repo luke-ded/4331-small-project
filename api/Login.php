@@ -1,8 +1,10 @@
-<?php
-
+<?php //Login.php
+    
+    include_once 'UtilFunctions.php';
+    
 	$inData = getRequestInfo();
 	$userName = $inData["loginName"];
-	$password = $inData["loginPassword"];
+	$password = $inData["password"];
 	
 	$id = 0;
 
@@ -22,38 +24,15 @@
 		if( $row = $result->fetch_assoc()  )
 		{
 		    //if user exists, send that information to the developer on the front end
-			returnWithInfo( $row['ID'] );
+			returnWithInfo( ('"id":"' . $row['ID'] . '"') );
 		}
 		else
 		{
-			returnWithError("No Records Found");
+			returnWithErrorWithId("No Records Found");
 		}
 
 		$stmt->close();
 		$conn->close();
-	}
-	
-	function getRequestInfo()
-	{
-		return json_decode(file_get_contents('php://input'), true);
-	}
-
-	function sendResultInfoAsJson( $obj )
-	{
-		header('Content-type: application/json');
-		echo $obj;
-	}
-	
-	function returnWithError( $err )
-	{
-		$retValue = '{"id":0,"error":"' . $err . '"}';
-		sendResultInfoAsJson( $retValue );
-	}
-	
-	function returnWithInfo( $id )
-	{
-		$retValue = '{"id":' . $id . ',"error":""}';
-		sendResultInfoAsJson( $retValue );
 	}
 	
 ?>
