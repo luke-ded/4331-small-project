@@ -1,4 +1,7 @@
-<?php
+<?php //DeleteContact.php
+    
+    include_once 'UtilFunctions.php';
+    
 	$inData = getRequestInfo();
 	
 	$userId = $inData["userId"];
@@ -17,23 +20,6 @@
 		$stmt->close();
 		$conn->close();
 		returnWithError("");
-	}
-
-	function getRequestInfo()
-	{
-		return json_decode(file_get_contents('php://input'), true);
-	}
-
-	function sendResultInfoAsJson( $obj )
-	{
-		header('Content-type: application/json');
-		echo $obj;
-	}
-	
-	function returnWithError( $err )
-	{
-		$retValue = '{"error":"' . $err . '"}';
-		sendResultInfoAsJson( $retValue );
 	}
 	
 ?>
