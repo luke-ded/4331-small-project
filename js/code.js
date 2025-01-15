@@ -1,9 +1,11 @@
-const urlBase = 'http://127.0.0.1:5500/api/';
+const urlBase = 'http://127.0.0.1:5500/api/'; // Change this to real url
 const extension = 'php';
 
 let userId = 0;
 let firstName = "";
 let lastName = "";
+let symbol = false;
+let number = false;
 
 function doLogin()
 {
@@ -60,9 +62,12 @@ function doLogin()
 
 function doSignup()
 {
+	if(!passCheck())
+		return;
+
 	userId = 0;
 	firstName = document.getElementById("firstName").value;
-	lastName = document.getElementById("lastName");
+	lastName = document.getElementById("lastName").value;
 	
 	let login = document.getElementById("loginName").value;
 	let password = document.getElementById("loginPassword").value;
@@ -237,4 +242,34 @@ function searchContact()
 		document.getElementById("contactSearchResult").innerHTML = err.message;
 	}
 	
+}
+
+function passCheck()
+{
+	var passwordInput = document.getElementById("loginPassword");
+
+	var symbols = new Set(['!', '@', '#', '$', '%', '^', '&', '*']);
+	var numbers = new Set(['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']);
+
+	symbol = number = false;
+
+	for(let i = 0; i < passwordInput.value.length; i++)
+	{
+		if(symbols.has(passwordInput.value[i]))
+		{
+			symbol = true;
+		}
+		else if(numbers.has(passwordInput.value[i]))
+		{
+			number = true;
+		}
+		if(symbol && number) break;
+	}
+
+	let retval = symbol && number && passwordInput.value.length > 7;
+	if(!retval)
+		document.getElementById("loginResult").style.color = "#df1e24";
+
+	return retval;
+		
 }
