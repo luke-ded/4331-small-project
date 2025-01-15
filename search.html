@@ -1,0 +1,51 @@
+<html>
+<head>
+    <title>Search Contacts</title>
+    <script type="text/javascript" src="js/code.js"></script>
+    <link href="css/styles.css" rel="stylesheet">	
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+	
+    <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function() 
+    {
+        readCookie();
+    }, false);
+    </script>
+	
+</head>
+<body>
+
+
+<div class="main">
+
+    <div class="icon">
+        <h2 class="logo">WebsiteName</h2>
+        
+    </div>
+
+    <button id="searchTab" class="actionBtn">Search</button>
+
+    <a href="add.html"><button id="addTab" class="actionBtn" onclick = >Add Contact</button></a>
+    
+    <script type="text/javascript">
+        document.getElementById("searchTab").style.color = "rgb(0, 157, 255)";
+        document.getElementById("searchTab").style.borderColor = "rgb(0, 157, 255)";
+    </script>
+
+    <button type="button" id="logoutButton" class="logoutButton" onclick="doLogout();"> Log Out </button>
+
+    <span id="userName"></span><br />
+
+    <div id="accessUIDiv">
+        <br />
+
+        <input type="text" id="searchText" placeholder="Color To Search For"/>
+        <button type="button" id="searchColorButton" class="buttons" onclick="searchColor();"> Search Color </button><br />
+        <span id="contactSearchResult"></span>
+        <p id="colorList">
+        </p><br /><br />
+
+    </div>
+</div>
+</body>
+</html>

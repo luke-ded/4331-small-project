@@ -48,7 +48,7 @@ function doLogin()
 
 				saveCookie();
 	
-				window.location.href = "contact.html";
+				window.location.href = "search.html";
 			}
 		};
 		xhr.send(jsonPayload);
@@ -104,7 +104,7 @@ function doSignup()
 
 				saveCookie();
 	
-				window.location.href = "contact.html";
+				window.location.href = "search.html";
 			}
 		};
 		xhr.send(jsonPayload);
@@ -149,7 +149,7 @@ function readCookie()
 	
 	if( userId < 0 )
 	{
-		window.location.href = "index.html";
+		//window.location.href = "index.html";
 	}
 	else
 	{

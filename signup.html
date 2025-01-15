@@ -11,8 +11,8 @@
 <body>
     <div class="main">
         <div class="icon">
-            <h2 class="logo">WebsiteName</h2>
-          </div>
+          <h2 class="logo">WebsiteName</h2>
+        </div>
 
           <button id="signupBtn" class ="signupbuttoneng">Sign up</button>
 
@@ -33,12 +33,19 @@
 
       <div class="signupDiv">
         <span id="inner-title">Sign Up</span>
-        <input type="text" id="firstName" placeholder="First Name"/><br />
-        <input type="text" id="lastName" placeholder="Last Name"/><br />
+<!--         <input type="text" id="firstName" placeholder="First Name"/><br />
+        <input type="text" id="lastName" placeholder="Last Name"/><br /> -->
         <input type="text" id="loginName" placeholder="Username" /><br />
         <input type="password" id="loginPassword" placeholder="Password"/><br />
-        <button type="button" id="doLoginButton" class="dologinbutton" onclick="doSignup();"> Sign Up </button>
+        
+        <script type="text/javascript">
+          document.getElementById("loginPassword").onclick = function()
+          {
+            document.getElementById("loginResult").innerHTML = "Password must contain:\n1 Special Character: !@#$%&*,\n1 Number: 0123456789,\n Length of at least 8";
+          }
+        </script>
         <span id="loginResult"></span>
+        <button type="button" id="doLoginButton" class="dologinbutton" onclick="doSignup();"> Sign Up </button>
       </div>
     </div>
 </body>
