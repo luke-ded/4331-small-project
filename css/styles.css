@@ -247,7 +247,7 @@
 {
 	font-size: 30px;
 }
-#colorText
+#contactText
 {
 	font-size: 30px;
 }
@@ -300,11 +300,11 @@ select{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-#colorSearchResult{
+#contactSearchResult{
     display: none;
 }
 
-#colorAddResult{
+#contactAddResult{
     display: inline-block;
     font-size: 0.8em;
     width: 90%;
