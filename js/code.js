@@ -17,7 +17,7 @@ function doLogin()
 	
 	document.getElementById("loginResult").innerHTML = "";
 
-	let tmp = {login:login,password:password};
+	let tmp = {loginName:login,loginPassword:password};
 //	var tmp = {login:login,password:hash};
 	let jsonPayload = JSON.stringify( tmp );
 	
@@ -70,7 +70,7 @@ function doSignup()
 	
 	document.getElementById("loginResult").innerHTML = "";
 
-	let tmp = {login:login,password:password,firstName:firstName,lastName:lastName};
+	let tmp = {loginName:login,loginPassword:password,/*firstName:firstName,lastName:lastName*/};
 //	var tmp = {login:login,password:hash};
 	let jsonPayload = JSON.stringify( tmp );
 	
