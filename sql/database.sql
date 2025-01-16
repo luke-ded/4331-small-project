@@ -10,6 +10,7 @@ CREATE TABLE `COP4331`.`Contacts`
     `LastName` VARCHAR(50) NOT NULL DEFAULT '' ,
     `Phone` VARCHAR(50) NOT NULL DEFAULT '' ,
     `Email` VARCHAR(50) NOT NULL DEFAULT '' ,
+    `UserId` INT NOT NULL DEFAULT 0,
      PRIMARY KEY (`ID`)
 ) ENGINE = InnoDB;
 
