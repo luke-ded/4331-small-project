@@ -1,4 +1,7 @@
-<?php
+<?php //AddContact.php
+    
+    include_once 'UtilFunctions.php';
+    
 	$inData = getRequestInfo();
 	
 	$userId = $inData["userId"];
@@ -14,29 +17,13 @@
 	} 
 	else
 	{
-		$stmt = $conn->prepare("INSERT INTO Contacts (UserID,FirstName,LastName,Phone,Email) VALUES(?,?,?,?,?)");
+		$stmt = $conn->prepare("INSERT INTO Contacts (UserId,FirstName,LastName,Phone,Email) VALUES(?,?,?,?,?)");
 		$stmt->bind_param("issss", $userId, $fname, $lname, $phone, $email);
 		$stmt->execute();
 		$stmt->close();
 		$conn->close();
 		returnWithError("");
 	}
-
-	function getRequestInfo()
-	{
-		return json_decode(file_get_contents('php://input'), true);
-	}
-
-	function sendResultInfoAsJson( $obj )
-	{
-		header('Content-type: application/json');
-		echo $obj;
-	}
-	
-	function returnWithError( $err )
-	{
-		$retValue = '{"error":"' . $err . '"}';
-		sendResultInfoAsJson( $retValue );
-	}
 	
 ?>
+
