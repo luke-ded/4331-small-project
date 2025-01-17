@@ -15,12 +15,10 @@ function doLogin()
 	
 	let login = document.getElementById("loginName").value;
 	let password = document.getElementById("loginPassword").value;
-//	var hash = md5( password );
 	
 	document.getElementById("loginResult").innerHTML = "";
 
 	let tmp = {loginName:login,loginPassword:password};
-//	var tmp = {login:login,password:hash};
 	let jsonPayload = JSON.stringify( tmp );
 	
 	let url = urlBase + '/Login.' + extension;
@@ -62,22 +60,16 @@ function doLogin()
 
 function doSignup()
 {
-	if(!passCheck())
-		return;
-
-
 	userId = 0;
 	firstName = document.getElementById("firstName").value;
 	lastName = document.getElementById("lastName").value;
 	
 	let login = document.getElementById("loginName").value;
 	let password = document.getElementById("loginPassword").value;
-//	var hash = md5( password );
 	
 	document.getElementById("loginResult").innerHTML = "";
 
 	let tmp = {loginName:login,loginPassword:password,/*firstName:firstName,lastName:lastName*/};
-//	var tmp = {login:login,password:hash};
 	let jsonPayload = JSON.stringify( tmp );
 	
 	let url = urlBase + '/SignUp.' + extension;
@@ -169,10 +161,27 @@ function doLogout()
 
 // This needs to be changed to have multiple fields firstname, lastname, phone, email, userid
 function addContact()
-{
-	let firstName, lastName, phone, email; // Change this line to text collection lines like below
-	//let newContact = document.getElementById("contactText").value;
+{	
+	// Change this line to text collection lines like below
+	let firstName = document.getElementById("firstNameText").value;
+	let lastName = document.getElementById("lastNameText").value;
+	let phone = document.getElementById("phoneText").value;
+	let email = document.getElementById("emailText").value;
 	document.getElementById("contactAddResult").innerHTML = "";
+
+	if(!validatePhone(phone))
+	{
+		document.getElementById("contactAddResult").innerHTML = "Invalid phone number.";
+
+		return;
+	}
+
+	if(!validateEmail(email))
+	{
+		document.getElementById("contactAddResult").innerHTML = "Invalid email.";
+
+		return;
+	}
 
 	let tmp = {firstName:firstName, lastName:lastName, phone:phone, email:email,userId:userId};
 	let jsonPayload = JSON.stringify( tmp );
@@ -245,7 +254,7 @@ function searchContact()
 	
 }
 
-function passCheck()
+function validatePassword()
 {
 	var passwordInput = document.getElementById("loginPassword");
 
@@ -271,6 +280,26 @@ function passCheck()
 	if(!retval)
 		document.getElementById("loginResult").style.color = "#df1e24";
 
-	return retval;
-		
+	return retval;	
+}
+
+function validateEmail(email)
+{
+  const ret = String(email)
+	.toLowerCase()
+	.match(
+	  /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+	);
+	return Boolean( ret );
+}
+
+function validatePhone(phone)
+{
+  const ret = String(phone)
+	.toLowerCase()
+	// via https://shorturl.at/KQZ2g
+	.match(
+		/^(\+\d{1,2}\s?)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/
+	);
+	return Boolean( ret );
 }
