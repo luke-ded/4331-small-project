@@ -38,10 +38,14 @@
 
     <!--This is all placeholder!! -->
     <div id="accessUIDiv">
+        <h2 id = "accessUITitle">Add a New Contact</h2>
         <br />
 
-        <input type="text" id="contactText" placeholder="Color To Add">
-        <button type="button" id="addColorButton" class="buttons" onclick="addContact();"> Add Contact </button><br />
+        <input type="text" id="firstNameText" class = "addText" placeholder="First Name">
+        <input type="text" id="lastNameText" class = "addText" placeholder="Last Name">
+        <input type="text" id="phoneText" class = "addText" placeholder="Phone #: XXX-XXX-XXXX">
+        <input type="text" id="emailText" class = "addText" placeholder="Email: example@gmail.com">
+        <button type="button" id="addColorButton" class="addbutton" onclick="addContact();"> Add Contact </button><br />
         <span id="contactAddResult"></span>
     </div>
 </div>
