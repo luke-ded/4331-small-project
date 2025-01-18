@@ -299,10 +299,16 @@ input[type="text"],input[type="password"]
 
 #userName
 {
-    margin-left: 10%;
-    width: 80%;
+    float:right;
+    margin-top: 11px;
+    margin-right: 20px;
+    height:fit-content;
+    width: fit-content;
+    padding: 10px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    color:white; 
+    color:aquamarine; 
 }
 
 select
