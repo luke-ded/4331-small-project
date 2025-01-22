@@ -1,4 +1,4 @@
-const urlBase = 'http://127.0.0.1:5500/api/'; // Change this to real url
+const urlBase = 'http://165.227.67.110/api/'; // Change this to real url
 const extension = 'php';
 
 let userId = 0;
@@ -146,7 +146,7 @@ function readCookie()
 	}
 	else
 	{
-		document.getElementById("userName").innerHTML = "Logged in as " + firstName + " " + lastName;
+		document.getElementById("userName").innerHTML = userName;
 	}
 }
 
