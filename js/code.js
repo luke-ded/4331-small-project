@@ -17,7 +17,7 @@ function doLogin()
 	let password = document.getElementById("loginPassword").value;
 
 	if ((login.length == 0) && (password.length == 0)) {
-		document.getElementById("loginResult").innerHTML = "Both fields are Empty!";
+		document.getElementById("loginResult").innerHTML = "Both Username and Password is Empty!";
 		return;
 	} else if ((login.length != 0) && (password.length == 0)) {
 		document.getElementById("loginResult").innerHTML = "Password is Empty!";
@@ -79,7 +79,7 @@ function doSignup()
 	let password = document.getElementById("loginPassword").value;
 
 	if ((login.length == 0) && (password.length == 0)) {
-		document.getElementById("loginResult").innerHTML = "Both fields are Empty!";
+		document.getElementById("loginResult").innerHTML = "Both Username and Password is Empty!";
 		return;
 	} else if ((login.length != 0) && (password.length == 0)) {
 		document.getElementById("loginResult").innerHTML = "Password is Empty!";
