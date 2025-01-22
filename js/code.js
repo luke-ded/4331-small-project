@@ -77,6 +77,17 @@ function doSignup()
 	lastName = document.getElementById("lastName").value; */
 	let login = userName = document.getElementById("loginName").value;
 	let password = document.getElementById("loginPassword").value;
+
+	if ((login.length == 0) && (password.length == 0)) {
+		document.getElementById("loginResult").innerHTML = "Both fields are Empty!";
+		return;
+	} else if ((login.length != 0) && (password.length == 0)) {
+		document.getElementById("loginResult").innerHTML = "Password is Empty!";
+		return;
+	} else if ((login.length == 0) && (password.length != 0)){
+		document.getElementById("loginResult").innerHTML = "Username is Empty!";
+		return;
+	}
 	
 	
 	
