@@ -1,4 +1,4 @@
-const urlBase = 'http://165.227.67.110/api/'; // Change this to real url
+const urlBase = 'http://127.0.0.1:5500/api/'; // Change this to real url
 const extension = 'php';
 
 let userId = 0;
@@ -13,7 +13,7 @@ function doLogin()
 	firstName = "";
 	lastName = "";
 	
-	let login = document.getElementById("loginName").value;
+	let login = userName = document.getElementById("loginName").value;
 	let password = document.getElementById("loginPassword").value;
 	
 	document.getElementById("loginResult").innerHTML = "";
@@ -60,13 +60,18 @@ function doLogin()
 
 function doSignup()
 {
-	userId = 0;
-	firstName = document.getElementById("firstName").value;
-	lastName = document.getElementById("lastName").value;
 	
-	let login = document.getElementById("loginName").value;
+	userId = 0;
+	/* firstName = document.getElementById("firstName").value;
+	lastName = document.getElementById("lastName").value; */
+	let login = userName = document.getElementById("loginName").value;
 	let password = document.getElementById("loginPassword").value;
 	
+	
+	if(!validatePassword())
+		return;
+
+
 	document.getElementById("loginResult").innerHTML = "";
 
 	let tmp = {loginName:login,loginPassword:password,/*firstName:firstName,lastName:lastName*/};
@@ -159,7 +164,6 @@ function doLogout()
 	window.location.href = "index.html";
 }
 
-// This needs to be changed to have multiple fields firstname, lastname, phone, email, userid
 function addContact()
 {	
 	// Change this line to text collection lines like below
@@ -257,7 +261,6 @@ function searchContact()
 function validatePassword()
 {
 	var passwordInput = document.getElementById("loginPassword");
-
 	var symbols = new Set(['!', '@', '#', '$', '%', '^', '&', '*']);
 	var numbers = new Set(['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']);
 
