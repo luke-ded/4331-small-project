@@ -1,4 +1,4 @@
-const urlBase = 'http:/165.227.67.110/api/'; // Change this to real url
+const urlBase = 'http://165.227.67.110/api'; // Change this to real url
 const extension = 'php';
 
 let userId = 0;
