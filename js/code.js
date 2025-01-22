@@ -1,4 +1,4 @@
-const urlBase = 'http://165.227.67.110/api/'; // Change this to real url
+const urlBase = 'http://127.0.0.1:5500/api/'; // Change this to real url
 const extension = 'php';
 
 let userId = 0;
@@ -59,6 +59,8 @@ function doLogin()
 	
 				window.location.href = "search.html";
 			}
+			else
+			document.getElementById("loginResult").innerHTML = "status = " + this.status + ", readyState = " + this.readyState;
 		};
 		xhr.send(jsonPayload);
 	}
@@ -78,19 +80,7 @@ function doSignup()
 	let login = userName = document.getElementById("loginName").value;
 	let password = document.getElementById("loginPassword").value;
 
-	if ((login.length == 0) && (password.length == 0)) {
-		document.getElementById("loginResult").innerHTML = "Both Username and Password is Empty!";
-		return;
-	} else if ((login.length != 0) && (password.length == 0)) {
-		document.getElementById("loginResult").innerHTML = "Password is Empty!";
-		return;
-	} else if ((login.length == 0) && (password.length != 0)){
-		document.getElementById("loginResult").innerHTML = "Username is Empty!";
-		return;
-	}
-	
-	
-	
+
 	if(!validatePassword())
 		return;
 
