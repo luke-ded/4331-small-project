@@ -307,7 +307,7 @@ input[type="text"],input[type="password"]
     font-family: Arial, Helvetica, sans-serif;
     white-space: pre-line;
     text-align: center;
-    color: #ffffff;
+    color: rgb(219,171,37);
 }
 
 #userName
