@@ -34,17 +34,17 @@
       <span id="inner-title">Sign Up</span>
       <!--<input type="text" id="firstName" placeholder="First Name"/><br />
       <input type="text" id="lastName" placeholder="Last Name"/><br /> -->
-      <input type="text" id="loginName" placeholder="Username" /><br />
-      <input type="password" id="loginPassword" placeholder="Password"/><br />
+      <nobr><h5 class="inputPrompt">Username</h5><input type="text" id="loginName" placeholder="Username" /></nobr><br />
+      <nobr><h5 class="inputPrompt">Password</h5><input type="password" id="loginPassword" placeholder="Password"/></nobr><br />
       
       <script type="text/javascript">
         document.getElementById("loginPassword").onclick = function()
         {
-          document.getElementById("loginResult").innerHTML = "Password must contain:\n1 Special Character: !@#$%&*,\n1 Number: 0123456789,\n Length of at least 8";
+          document.getElementById("loginResult").innerHTML = "Password must contain:\n1 Special Character: !@#$%&*\n1 Number: 0123456789\n Length of at least 8";
         }
       </script>
       <span id="loginResult"></span>
-      <button type="button" id="doLoginButton" class="dologinbutton" onclick="doSignup();"> Sign Up </button>
+      <button type="button" id="doSignupButton" class="dologinbutton" onclick="doSignup();"> Sign Up </button>
     </div>
   </div>
 </body>
