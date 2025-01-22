@@ -240,6 +240,12 @@ function searchContact()
 {
 	let srch = document.getElementById("searchText").value;
 	document.getElementById("contactSearchResult").innerHTML = "";
+
+	if (srch.length == 0){
+		document.getElementById("contactSearchResult").innerHTML = "No information provided!";
+		return;
+	}
+
 	
 	let contactList = "";
 
