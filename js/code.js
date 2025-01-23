@@ -242,7 +242,7 @@ function searchContact()
 	document.getElementById("contactSearchResult").innerHTML = "";
 
 	if (srch.length == 0){
-		document.getElementById("contactSearchResult").innerHTML = "No information provided!";
+		document.getElementById("contactSearchResult").innerHTML = "*No information provided!*";
 		return;
 	}
 
