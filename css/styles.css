@@ -336,9 +336,9 @@ select
 #contactSearchResult
 {
     display: inline-block;
-    margin-right: 5%;
+    margin-right: 10%;
     width: 90%;
-    font-size: 1.4em;
+    font-size: 1em;
     font-family: Arial, Helvetica, sans-serif;
     white-space: pre-line;
     text-align: center;
