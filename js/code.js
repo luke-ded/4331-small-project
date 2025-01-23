@@ -243,6 +243,21 @@ function addContact()
 	
 }
 
+function removeContact()
+{
+	let firstName = document.getElementById("firstNameText").value;
+	let phone = document.getElementById("phoneText").value;
+
+	if (firstName.length == 0) {
+		
+		return;
+	}
+
+	
+}
+
+
+
 function searchContact()
 {
 	let srch = document.getElementById("searchText").value;
