@@ -196,16 +196,34 @@ function addContact()
 	let email = document.getElementById("emailText").value;
 	document.getElementById("contactAddResult").innerHTML = "";
 
+	if ((firstName.length == 0) && (lastName.length != 0) && (phone.length != 0) && (email.length != 0)){
+		document.getElementById("contactAddResult").innerHTML = "First name missing!";
+		return;
+	} else if ((firstName.length != 0) && (lastName.length == 0) && (phone.length != 0) && (email.length != 0)){
+		document.getElementById("contactAddResult").innerHTML = "Last name Missing!";
+		return;
+	} else if ((firstName.length != 0) && (lastName.length != 0) && (phone.length == 0) && (email.length != 0)){
+		document.getElementById("contactAddResult").innerHTML = "Phone number missing!";
+		return;
+	} else if ((firstName.length != 0) && (lastName.length != 0) && (phone.length != 0) && (email.length == 0)){
+		document.getElementById("contactAddResult").innerHTML = "Email missing!";
+		return;
+	} else if (!((firstName.length != 0) && (lastName.length != 0) && (phone.length != 0) && (email.length != 0))) {
+		document.getElementById("contactAddResult").innerHTML = "Multiple fields missing!";
+		return;
+	}
+
+	
 	if(!validatePhone(phone))
 	{
-		document.getElementById("contactAddResult").innerHTML = "Invalid phone number.";
+		document.getElementById("contactAddResult").innerHTML = "Invalid phone number!";
 
 		return;
 	}
 
 	if(!validateEmail(email))
 	{
-		document.getElementById("contactAddResult").innerHTML = "Invalid email.";
+		document.getElementById("contactAddResult").innerHTML = "Invalid email!";
 
 		return;
 	}
