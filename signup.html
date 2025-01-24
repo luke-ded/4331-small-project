@@ -47,8 +47,7 @@
         }
         document.getElementById("loginPassword").onkeyup = function()
         {
-          if(passCheck()) document.getElementById("message").style.color = "green";
-          else document.getElementById("message").style.color = "rgb(219,171,37)";
+          validatePassword();
         }
       </script>
       <h5 class="signupResult" id="message"></h5>
