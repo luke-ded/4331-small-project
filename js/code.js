@@ -7,6 +7,9 @@ let lastName = "";
 let symbol = false;
 let number = false;
 
+let symbols = new Set(['!', '@', '#', '$', '%', '^', '&', '*']);
+let numbers = new Set(['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']);
+
 function doLogin()
 {
 	userId = 0;
@@ -97,7 +100,7 @@ function doSignup()
 
 	document.getElementById("loginResult").innerHTML = "";
 
-	let tmp = {loginName:login,loginPassword:password,/*firstName:firstName,lastName:lastName*/};
+	let tmp = {loginName:login,password:password,/*firstName:firstName,lastName:lastName*/};
 	let jsonPayload = JSON.stringify( tmp );
 	
 	let url = urlBase + '/SignUp.' + extension;
@@ -311,31 +314,43 @@ function searchContact()
 
 function validatePassword()
 {
-	var passwordInput = document.getElementById("loginPassword");
-	var symbols = new Set(['!', '@', '#', '$', '%', '^', '&', '*']);
-	var numbers = new Set(['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']);
-
+	var passwordInput = document.getElementById("loginPassword").value;
+	
 	symbol = number = false;
 
-	for(let i = 0; i < passwordInput.value.length; i++)
+	for(let i = 0; i < passwordInput.length; i++)
 	{
-		if(symbols.has(passwordInput.value[i]))
+		if(symbols.has(passwordInput[i]))
 		{
 			symbol = true;
 		}
-		else if(numbers.has(passwordInput.value[i]))
+		else if(numbers.has(passwordInput[i]))
 		{
 			number = true;
 		}
 		if(symbol && number) break;
 	}
 
-	let retval = symbol && number && passwordInput.value.length > 7;
-	if(!retval)
-		document.getElementById("loginResult").style.color = "#df1e24";
+	
+	if(symbol)
+		document.getElementById("symbolResult").style.color = "green";
+	else 
+		document.getElementById("symbolResult").style.color = "rgb(219,171,37)";
 
-	return retval;	
+	if(number) 
+		document.getElementById("numResult").style.color = "green";
+	else 
+		document.getElementById("numResult").style.color = "rgb(219,171,37)";
+
+	if(passwordInput.length > 7) 
+		document.getElementById("lenResult").style.color = "green";
+	else 
+		document.getElementById("lenResult").style.color = "rgb(219,171,37)";
+
+		
+	return symbol && number && passwordInput.value.length > 7;
 }
+
 
 function validateEmail(email)
 {

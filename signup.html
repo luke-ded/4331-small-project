@@ -40,10 +40,21 @@
       <script type="text/javascript">
         document.getElementById("loginPassword").onclick = function()
         {
-          document.getElementById("loginResult").innerHTML = "Password must contain:\n1 Special Character: !@#$%&*\n1 Number: 0123456789\n Length of at least 8";
+          document.getElementById("message").innerHTML = "Password must contain: <br>";
+          document.getElementById("symbolResult").innerHTML = "1 Special Character: !@#$%&*<br>";
+          document.getElementById("numResult").innerHTML = "1 Number: 0123456789<br>"; 
+          document.getElementById("lenResult").innerHTML = "Length of at least 8<br>";
+        }
+        document.getElementById("loginPassword").onkeyup = function()
+        {
+          if(passCheck()) document.getElementById("message").style.color = "green";
+          else document.getElementById("message").style.color = "rgb(219,171,37)";
         }
       </script>
-      <span id="loginResult"></span>
+      <h5 class="signupResult" id="message"></h5>
+      <h5 class="signupResult" id="symbolResult"></h5>
+      <h5 class="signupResult" id="numResult"></h5>
+      <h5 class="signupResult" id="lenResult"></h5>
       <button type="button" id="doSignupButton" class="dologinbutton" onclick="doSignup();"> Sign Up </button>
     </div>
   </div>
