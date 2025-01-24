@@ -75,8 +75,7 @@ function doLogin()
 }
 
 function doSignup()
-{
-	
+{	
 	userId = 0;
 	/* firstName = document.getElementById("firstName").value;
 	lastName = document.getElementById("lastName").value; */
@@ -98,7 +97,10 @@ function doSignup()
 		return;
 	}
 
-	document.getElementById("loginResult").innerHTML = "";
+	document.getElementById("message").innerHTML = "";
+	document.getElementById("symbolResult").innerHTML = "";
+	document.getElementById("numResult").innerHTML = "";
+	document.getElementById("lenResult").innerHTML = "";
 
 	let tmp = {loginName:login,password:password,/*firstName:firstName,lastName:lastName*/};
 	let jsonPayload = JSON.stringify( tmp );
@@ -119,7 +121,7 @@ function doSignup()
 		
 				if( userId < 1 )
 				{		
-					document.getElementById("loginResult").innerHTML = "User already exists.";
+					document.getElementById("message").innerHTML = "User already exists.";
 					return;
 				}
 		
@@ -135,7 +137,7 @@ function doSignup()
 	}
 	catch(err)
 	{
-		document.getElementById("loginResult").innerHTML = err.message;
+		document.getElementById("message").innerHTML = err.message;
 	}
 
 }
@@ -347,7 +349,7 @@ function validatePassword()
 	else 
 		document.getElementById("lenResult").style.color = "rgb(219,171,37)";
 
-		
+
 	return symbol && number && passwordInput.value.length > 7;
 }
 
