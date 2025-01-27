@@ -312,7 +312,7 @@ function searchContact()
 					}
 				}
 				
-				document.getElementsByTagName("p")[0].innerHTML = contactList;
+				document.getElementsById("contactSearchResult").innerHTML = contactList;
 			}
 		};
 		xhr.send(jsonPayload);
