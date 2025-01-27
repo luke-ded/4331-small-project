@@ -83,13 +83,22 @@ function doSignup()
 	let password = document.getElementById("loginPassword").value;
 
 	if ((login.length == 0) && (password.length == 0)) {
-		document.getElementById("signupResult").innerHTML = "**Both fields are Empty!**";
+		document.getElementById("message").innerHTML = "**Both fields are Empty!**";
+		document.getElementById("symbolResult").innerHTML = "";
+		document.getElementById("numResult").innerHTML = ""; 
+		document.getElementById("lenResult").innerHTML = "";
 		return;
 	} else if ((login.length != 0) && (password.length == 0)) {
-		document.getElementById("signupResult").innerHTML = "**Password is Empty!**";
+		document.getElementById("message").innerHTML = "**Password is Empty!**";
+		document.getElementById("symbolResult").innerHTML = "";
+		document.getElementById("numResult").innerHTML = ""; 
+		document.getElementById("lenResult").innerHTML = "";
 		return;
 	} else if ((login.length == 0) && (password.length != 0)){
-		document.getElementById("signupResult").innerHTML = "**Username is Empty!**";
+		document.getElementById("message").innerHTML = "**Username is Empty!**";
+		document.getElementById("symbolResult").innerHTML = "";
+		document.getElementById("numResult").innerHTML = ""; 
+		document.getElementById("lenResult").innerHTML = "";
 		return;
 	}
 
