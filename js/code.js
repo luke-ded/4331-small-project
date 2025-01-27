@@ -300,11 +300,21 @@ function searchContact()
 		{
 			if (this.readyState == 4 && this.status == 200) 
 			{
+				let tableData = "";
 				document.getElementById("contactSearchResult").innerHTML = "Contacts(s) has been retrieved";
 				let jsonObject = JSON.parse( xhr.responseText );
 				
 				for( let i=0; i<jsonObject.results.length; i++ )
-				{
+				{	
+					//name
+					tableData += `<tr><td> ${jsonObject.results[i].firstName} ${jsonObject.results[i].lastName}</td>`
+					//Email
+					tableData += `<td> ${jsonObject.results[i].email} </td>`
+					//Phone
+					tableData += `<td> ${jsonObject.results[i],phone} </td></tr>`
+
+					document.getElementById("SearchTable").innerHTML=tableData;
+
 					contactList += jsonObject.results[i];
 					if( i < jsonObject.results.length - 1 )
 					{
