@@ -279,7 +279,7 @@ function searchContact()
 	document.getElementById("SearchTable").innerHTML = "";
 
 	if (srch.length == 0){
-		document.getElementById("contactSearchResult").innerHTML = "**No information provided!";
+		document.getElementById("SearchTable").innerHTML = "**No information provided!";
 		return;
 	}
 
@@ -301,7 +301,7 @@ function searchContact()
 			if (this.readyState == 4 && this.status == 200) 
 			{
 				let tableData = "";
-				document.getElementById("contactSearchResult").innerHTML = "Contacts(s) has been retrieved";
+				document.getElementById("SearchTable").innerHTML = "Contacts(s) has been retrieved";
 				let jsonObject = JSON.parse( xhr.responseText );
 				
 				for( let i=0; i<jsonObject.results.length; i++ )
@@ -322,14 +322,14 @@ function searchContact()
 					}
 				}
 				
-				document.getElementsById("contactSearchResult").innerHTML = contactList;
+				document.getElementsById("SearchTable").innerHTML = contactList;
 			}
 		};
 		xhr.send(jsonPayload);
 	}
 	catch(err)
 	{
-		document.getElementById("contactSearchResult").innerHTML = err.message;
+		document.getElementById("SearchTable").innerHTML = err.message;
 	}
 	
 }
