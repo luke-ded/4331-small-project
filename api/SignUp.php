@@ -27,7 +27,7 @@
 		else
 		{
 		    //if it is entirely a new user, add the user to the database
-		    $stmt = $conn->prepare("INSERST INTO Users (Login,Password) VALUES(?,?)");
+		    $stmt = $conn->prepare("INSERT INTO Users (Login,Password) VALUES(?,?)");
 		    $stmt->bind_param("ss", $username, $password);
 		    $stmt->execute();
 		    returnWithError("");
