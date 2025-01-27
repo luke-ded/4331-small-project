@@ -17,8 +17,8 @@
 		$stmt = $conn->prepare("SELECT ID FROM Users WHERE Login=? AND Password=?");
 		$stmt->bind_param("ss", $username, $password);
 		$stmt->execute();
+		$result = $stmt->get_result();
 		
-
 		if( $row = $result->fetch_assoc() )
 		{
 		    //if user exists, send an error message
