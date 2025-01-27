@@ -301,28 +301,19 @@ function searchContact()
 			if (this.readyState == 4 && this.status == 200) 
 			{
 				let tableData = "";
-				document.getElementById("SearchTable").innerHTML = "Contacts(s) has been retrieved";
 				let jsonObject = JSON.parse( xhr.responseText );
 				
 				for( let i=0; i<jsonObject.results.length; i++ )
 				{	
 					//name
-					tableData += `<tr><td> ${jsonObject.results[i].firstName} ${jsonObject.results[i].lastName}</td>`
+					tableData += `<tr><td> ${jsonObject.results[i].FirstName} ${jsonObject.results[i].LastName}</td>`
 					//Email
-					tableData += `<td> ${jsonObject.results[i].email} </td>`
+					tableData += `<td> ${jsonObject.results[i].Email} </td>`
 					//Phone
-					tableData += `<td> ${jsonObject.results[i],phone} </td></tr>`
-
-					document.getElementById("SearchTable").innerHTML=tableData;
-
-					contactList += jsonObject.results[i];
-					if( i < jsonObject.results.length - 1 )
-					{
-						contactList += "<br />\r\n";
-					}
+					tableData += `<td> ${jsonObject.results[i].Phone} </td></tr>`
 				}
 				
-				document.getElementsById("SearchTable").innerHTML = contactList;
+				document.getElementById("SearchTable").innerHTML=tableData;
 			}
 		};
 		xhr.send(jsonPayload);
