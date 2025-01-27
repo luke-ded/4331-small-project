@@ -82,10 +82,6 @@ function doSignup()
 	let login = userName = document.getElementById("loginName").value;
 	let password = document.getElementById("loginPassword").value;
 
-
-	if(!validatePassword())
-		return;
-
 	if ((login.length == 0) && (password.length == 0)) {
 		document.getElementById("loginResult").innerHTML = "**Both fields are Empty!**";
 		return;
@@ -96,6 +92,9 @@ function doSignup()
 		document.getElementById("loginResult").innerHTML = "**Username is Empty!**";
 		return;
 	}
+
+	if(!validatePassword())
+		return;
 
 	document.getElementById("message").innerHTML = "";
 	document.getElementById("symbolResult").innerHTML = "";
@@ -352,7 +351,7 @@ function validatePassword()
 		document.getElementById("lenResult").style.color = "rgb(219,171,37)";
 
 
-	return symbol && number && passwordInput.value.length > 7;
+	return symbol && number && passwordInput.length > 7;
 }
 
 
