@@ -132,6 +132,8 @@ function doSignup()
 	
 				window.location.href = "search.html";
 			}
+			else
+				document.getElementById("loginResult").innerHTML = "status = " + this.status + ", readyState = " + this.readyState;
 		};
 		xhr.send(jsonPayload);
 	}
