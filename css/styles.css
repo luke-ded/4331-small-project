@@ -312,7 +312,6 @@ input[type="text"],input[type="password"]
 
 .signupResult
 {
-    display: inline-block;
     margin-top:2%;
     margin-left:25%;
     width: 50%;
