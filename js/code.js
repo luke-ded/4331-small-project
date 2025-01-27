@@ -276,7 +276,7 @@ function removeContact()
 function searchContact()
 {
 	let srch = document.getElementById("searchText").value;
-	document.getElementById("contactSearchResult").innerHTML = "";
+	document.getElementById("SearchTable").innerHTML = "";
 
 	if (srch.length == 0){
 		document.getElementById("contactSearchResult").innerHTML = "**No information provided!";
