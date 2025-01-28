@@ -259,6 +259,26 @@ input[type="text"],input[type="password"]
     color:rgb(0, 157, 255);
 }
 
+.removebutton
+{
+    float:right;  
+    border-radius: 5px;
+    margin-right: 30%;
+    margin-top: 2%;
+    border: 1px solid aquamarine;
+    width:40%;
+    padding: 10px;
+    background:transparent;
+    font-size: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+    color:aquamarine;
+}
+
+.removebutton:hover
+{
+    border-color: rgb(0, 157, 255);
+    color:rgb(0, 157, 255);
+}
 
 #inner-title
 {
