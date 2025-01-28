@@ -199,7 +199,7 @@
     margin-top:5%;
     margin-right:10%;
     margin-left:3%;
-    border-radius: 0%;
+    border-radius: 3px;
     border-width: 0;
 	font-size: 25px;
 }
@@ -209,25 +209,33 @@
     margin-top:5%;
     margin-right:10%;
     margin-left:3%;
-    border-radius: 0%;
+    border-radius: 3px;
     border-width: 0;
 	font-size: 25px; 
 }
 
 #searchText
 {
-	font-size: 30px;
+	font-size: 25px;
+}
+
+input[type="text"],input[type="password"]
+{   
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
 }
 
 .addText
 {
     float:left;
-    margin-top:1%;
+    margin-top:3%;
     margin-left:10%;
     width:80%;
     height: 2.5%;
     padding: 10px;
-	font-size: 30px;
+    border-radius: 3px;
+    border-width: 0;
+	font-size: 25px;
 }
 
 .addbutton
@@ -251,16 +259,6 @@
     color:rgb(0, 157, 255);
 }
 
-
-input[type="text"],input[type="password"]
-{   
-    margin-left: 10%;
-    margin-bottom: 2%;
-    border-radius: 25px;
-    width: 80%;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-}
 
 #inner-title
 {
