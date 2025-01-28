@@ -34,6 +34,12 @@
         <span id="inner-title">Log In</span>
         <nobr><h5 class="inputPrompt">Username</h5><input type="text" id="loginName" placeholder="Username" /></nobr><br />
         <nobr><h5 class="inputPrompt">Password</h5><input type="password" id="loginPassword" placeholder="Password"/></nobr><br />
+        <script>
+        document.getElementById("loginPassword").onkeyup = function(e)
+        {
+            if(e.key == 'Enter') doLogin();
+        }
+        </script>
         <h5 id="loginResult"></h5>
         <button type="button" id="doLoginButton" class="dologinbutton" onclick="doLogin();"> Log in </button>
         

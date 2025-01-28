@@ -48,6 +48,10 @@
         {
           validatePassword();
         }
+        document.getElementById("loginPassword").onkeyup = function(e)
+        {
+          if(e.key == 'Enter') doSignup();
+        }
       </script>
       <h5 class="signupResult" id="message"></h5>
       <h5 class="signupResult" id="symbolResult"></h5>
