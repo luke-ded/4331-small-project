@@ -185,7 +185,7 @@ function readCookie()
 	
 	if( userId < 0 )
 	{
-		window.location.href = "index.html";
+		//window.location.href = "index.html";
 	}
 	else
 	{
@@ -204,7 +204,7 @@ function doLogout()
 
 function addContact()
 {	
-	// Change this line to text collection lines like below
+	console.log("done2");
 	let firstName = document.getElementById("firstNameText").value;
 	let lastName = document.getElementById("lastNameText").value;
 	let phone = document.getElementById("phoneText").value;
@@ -277,7 +277,7 @@ function searchContact()
 {
 	let srch = document.getElementById("searchText").value;
 	document.getElementById("SearchTable").innerHTML = "";
-
+	
 	if (srch.length == 0){
 		document.getElementById("SearchTable").innerHTML = "**No information provided!";
 		return;

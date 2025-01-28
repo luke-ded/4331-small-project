@@ -42,6 +42,12 @@
         <h2 id = "accessUITitle">Search for a Contact</h2>
         
         <input type="text" id="searchText" class="addText" placeholder="Contact To Search For"/><br />
+        <script>
+            document.getElementById("searchText").onkeyup = function(e)
+            {
+              if(e.key == 'Enter') searchContact();
+            }
+        </script>
         <h2 class="TableHead">Results</h2>  
 	<table>
         <tr>

@@ -44,8 +44,14 @@
         <input type="text" id="lastNameText" class = "addText" placeholder="Last Name">
         <input type="text" id="phoneText" class = "addText" placeholder="Phone #: XXX-XXX-XXXX">
         <input type="text" id="emailText" class = "addText" placeholder="Email: example@gmail.com">
+        <script>
+            document.getElementById("emailText").onkeyup = function(e)
+            {
+              if(e.key == 'Enter') addContact();
+            }
+        </script>
         <button type="button" id="addColorButton" class="addbutton" onclick="addContact();"> Add Contact </button><br />
-        <span id="contactAddResult"></span>
+        
     </div>
 </div>
 </body>
