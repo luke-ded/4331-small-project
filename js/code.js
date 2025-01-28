@@ -61,6 +61,8 @@ function doLogin()
 				saveCookie();
 	
 				window.location.href = "search.html";
+
+				document.getElementById("userName") = userName;
 			}
 			//else
 			//document.getElementById("loginResult").innerHTML = "status = " + this.status + ", readyState = " + this.readyState;
@@ -143,6 +145,8 @@ function doSignup()
 				saveCookie();
 	
 				window.location.href = "search.html";
+
+				document.getElementById("userName") = userName;
 			}
 			//else
 				//document.getElementById("message").innerHTML = "status = " + this.status + ", readyState = " + this.readyState;
@@ -161,7 +165,7 @@ function saveCookie()
 	let minutes = 20;
 	let date = new Date();
 	date.setTime(date.getTime()+(minutes*60*1000));	
-	document.cookie = "firstName=" + firstName + ",lastName=" + lastName + ",userId=" + userId + ";expires=" + date.toGMTString();
+	document.cookie = "firstName=" + firstName + ",lastName=" + lastName + ",userId=" + userId + ",userName=" + userName + ";expires=" + date.toGMTString();
 }
 
 function readCookie()
@@ -180,6 +184,10 @@ function readCookie()
 		else if( tokens[0] == "lastName" )
 		{
 			lastName = tokens[1];
+		}
+		else if( tokens[0] == "userName")
+		{
+			userName = tokens[1];
 		}
 		else if( tokens[0] == "userId" )
 		{
