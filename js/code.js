@@ -62,8 +62,8 @@ function doLogin()
 	
 				window.location.href = "search.html";
 			}
-			else
-			document.getElementById("loginResult").innerHTML = "status = " + this.status + ", readyState = " + this.readyState;
+			//else
+			//document.getElementById("loginResult").innerHTML = "status = " + this.status + ", readyState = " + this.readyState;
 		};
 		xhr.send(jsonPayload);
 	}
@@ -103,7 +103,11 @@ function doSignup()
 	}
 
 	if(!validatePassword())
+	{
+		setPassInst();
 		return;
+	}
+		
 
 	document.getElementById("message").innerHTML = "";
 	document.getElementById("symbolResult").innerHTML = "";
@@ -140,8 +144,8 @@ function doSignup()
 	
 				window.location.href = "search.html";
 			}
-			else
-				document.getElementById("message").innerHTML = "status = " + this.status + ", readyState = " + this.readyState;
+			//else
+				//document.getElementById("message").innerHTML = "status = " + this.status + ", readyState = " + this.readyState;
 		};
 		xhr.send(jsonPayload);
 	}
@@ -383,4 +387,12 @@ function validatePhone(phone)
 		/^(\+\d{1,2}\s?)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/
 	);
 	return Boolean( ret );
+}
+
+function setPassInst()
+{
+	document.getElementById("message").innerHTML = "Password must contain: <br>";
+	document.getElementById("symbolResult").innerHTML = "1 Special Character: !@#$%&*<br>";
+	document.getElementById("numResult").innerHTML = "1 Number: 0123456789<br>"; 
+	document.getElementById("lenResult").innerHTML = "Length of at least 8<br>";
 }

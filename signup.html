@@ -39,12 +39,9 @@
       <script type="text/javascript">
         document.getElementById("loginPassword").onclick = function()
         {
-          document.getElementById("message").innerHTML = "Password must contain: <br>";
-          document.getElementById("symbolResult").innerHTML = "1 Special Character: !@#$%&*<br>";
-          document.getElementById("numResult").innerHTML = "1 Number: 0123456789<br>"; 
-          document.getElementById("lenResult").innerHTML = "Length of at least 8<br>";
+          setPassInst();
         }
-        document.getElementById("loginPassword").onkeyup = function()
+        document.getElementById("loginPassword").onkeyup = function(e)
         {
           validatePassword();
           if(e.key == 'Enter') doSignup();
