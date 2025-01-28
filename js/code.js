@@ -1,4 +1,4 @@
-const urlBase = 'http://165.227.67.110/api'; // Change this to real url
+const urlBase = 'http://165.227.67.110/api';
 const extension = 'php';
 
 let userId = 0;
@@ -185,7 +185,7 @@ function readCookie()
 	
 	if( userId < 0 )
 	{
-		//window.location.href = "index.html";
+		window.location.href = "index.html";
 	}
 	else
 	{
@@ -204,7 +204,6 @@ function doLogout()
 
 function addContact()
 {	
-	console.log("done2");
 	let firstName = document.getElementById("firstNameText").value;
 	let lastName = document.getElementById("lastNameText").value;
 	let phone = document.getElementById("phoneText").value;
