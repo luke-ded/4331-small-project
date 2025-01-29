@@ -328,7 +328,7 @@ function searchContact()
 			{
 				let tableData = "";
 				let jsonObject = JSON.parse( xhr.responseText );
-				let xen = jsonObject.results.length;
+				
 				
 				for( let i=0; i<jsonObject.results.length; i++ )
 				{	
@@ -342,7 +342,9 @@ function searchContact()
 
 				
 				document.getElementById("SearchTable").innerHTML=tableData;
-				document.getElementById("tableHeader").innerHTML = xen;
+				
+			} else {
+				document.getElementById("tableHeader").innerHTML = this.readyState;
 			}
 		};
 		xhr.send(jsonPayload);
