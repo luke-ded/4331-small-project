@@ -229,6 +229,7 @@
 #searchText
 {
 	font-size: 25px;
+	color: rgb(219,171,37);
 }
 
 input[type="text"],input[type="password"]
