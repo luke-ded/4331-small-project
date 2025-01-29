@@ -261,6 +261,12 @@ function addContact()
 			}
 		};
 		xhr.send(jsonPayload);
+
+
+		firstName = document.getElementById("firstNameText").value = "";
+		lastName = document.getElementById("lastNameText").value = "";
+		phone = document.getElementById("phoneText").value = "";
+		email = document.getElementById("emailText").value = "";
 	}
 	catch(err)
 	{
@@ -328,6 +334,8 @@ function searchContact()
 			}
 		};
 		xhr.send(jsonPayload);
+
+		document.getElementById("searchText").value = "";
 	}
 	catch(err)
 	{
