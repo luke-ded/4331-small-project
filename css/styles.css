@@ -89,7 +89,8 @@
     bottom:0;
     left:0;
     right:0;
-    margin:auto;
+    margin-top:15%;
+    margin-left:35%;
     border: 1px solid aquamarine;
     border-radius: 3px;
     width: 30%;
@@ -149,21 +150,26 @@
     bottom:0;
     left:0;
     right:0;
-    margin:auto;   
+    margin-top:10%;
+    margin-left:20%;
     border: 1px solid aquamarine;
     border-radius: 3px;
     width: 60%;
     height: fit-content;
-    padding: 25px;
+    padding: 20px;
     background-color: rgb(22, 23, 33,.7);
     font-size: 30px;
-    text-align: left;
+    text-align: center;
 }
 
 #accessUITitle
 {
-    padding: 10px;
-    font-size: 40px;
+    border-bottom: 3px solid aquamarine;
+    margin:auto;
+    width:fit-content;
+    
+    padding: 5px;
+    font-size: 30px;
     font-family: Arial, Helvetica, sans-serif;
     text-align:center;
     color:aquamarine;
@@ -273,8 +279,7 @@ input[type="text"],input[type="password"]
 
 #addContactButton
 {
-    margin-left:44%;
-    width:12%;
+    width:fit-content;
     padding:10px;
     font-size:.7em;
 }
