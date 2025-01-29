@@ -215,6 +215,17 @@
 	font-size: 25px; 
 }
 
+#loginPassword2
+{
+    margin-top:5%;
+    margin-right:10%;
+    margin-left:3%;
+    width:51%;
+    border-radius: 3px;
+    border-width: 0;
+    font-size: 25px; 
+}
+
 #searchText
 {
 	font-size: 25px;

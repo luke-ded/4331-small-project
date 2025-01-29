@@ -109,6 +109,15 @@ function doSignup()
 		setPassInst();
 		return;
 	}
+	else if(document.getElementById("loginPassword").value != document.getElementById("loginPassword2").value)
+	{
+		document.getElementById("message").innerHTML = "**Passwords do not match!**";
+		document.getElementById("symbolResult").innerHTML = "";
+		document.getElementById("numResult").innerHTML = "";
+		document.getElementById("lenResult").innerHTML = "";
+
+		return;
+	}
 		
 
 	document.getElementById("message").innerHTML = "";
@@ -197,7 +206,7 @@ function readCookie()
 	
 	if( userId < 0 )
 	{
-		window.location.href = "index.html";
+		//window.location.href = "index.html";
 	}
 	else
 	{
