@@ -314,7 +314,7 @@ function searchContact()
 
 	let tmp = {search:srch,userId:userId};
 	let jsonPayload = JSON.stringify( tmp );
-
+	
 	let url = urlBase + '/SearchContacts.' + extension;
 	
 	let xhr = new XMLHttpRequest();
@@ -328,7 +328,7 @@ function searchContact()
 			{
 				let tableData = "";
 				let jsonObject = JSON.parse( xhr.responseText );
-				
+				let xen = jsonObject.results.length;
 				
 				for( let i=0; i<jsonObject.results.length; i++ )
 				{	
@@ -342,6 +342,7 @@ function searchContact()
 
 				
 				document.getElementById("SearchTable").innerHTML=tableData;
+				document.getElementById("tableHeader").innerHTML = xen;
 			}
 		};
 		xhr.send(jsonPayload);
