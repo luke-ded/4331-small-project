@@ -330,7 +330,7 @@ function searchContact()
 				let jsonObject = JSON.parse( xhr.responseText );
 				
 				
-				for( let i=0; i<Object.keys(jsonObject).length; i++ )
+				for( let i=0; i<jsonObject.results.length; i++ )
 				{	
 					//name
 					tableData += `<tr><td> ${jsonObject.results[i].FirstName} ${jsonObject.results[i].LastName} </td>`
