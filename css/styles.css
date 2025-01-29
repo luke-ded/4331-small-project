@@ -387,6 +387,11 @@ select
 	color: rgb(219,171,37);
 }
 
+#tableHeader
+{
+	color: rgb(238,217,196);
+}
+
 th
 {
 	color: rgb(238,217,196);
