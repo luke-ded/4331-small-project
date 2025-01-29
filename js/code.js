@@ -328,11 +328,12 @@ function searchContact()
 			{
 				let tableData = "";
 				let jsonObject = JSON.parse( xhr.responseText );
+				let len = <jsonObject.results.length;
 				
 				for( let i=0; i<jsonObject.results.length; i++ )
 				{	
 					//name
-					tableData += `<tr><td> ${jsonObject.results[i].FirstName} ${jsonObject.results[i].LastName}</td>`
+					tableData += `<tr><td> ${jsonObject.results[i].FirstName} ${jsonObject.results[i].LastName} len</td>`
 					//Email
 					tableData += `<td> ${jsonObject.results[i].Email} </td>`
 					//Phone
