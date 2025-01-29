@@ -39,10 +39,10 @@
     <div id="accessUIDiv">
         <h2 id = "accessUITitle">Add a New Contact</h2>
 
-        <input type="text" id="firstNameText" class = "addText" placeholder="First Name">
-        <input type="text" id="lastNameText" class = "addText" placeholder="Last Name">
-        <input type="text" id="phoneText" class = "addText" placeholder="Phone #: XXX-XXX-XXXX">
-        <input type="text" id="emailText" class = "addText" placeholder="Email: example@gmail.com">
+        <nobr><h5 class = "inputPrompt">First Name </h5><h5 class="requiredStar">*</h5><input type="text" id="firstNameText" class = "addText" placeholder="First Name"></nobr>
+        <nobr><h5 class = "inputPrompt">Last Name </h5><h5 class="requiredStar">*</h5><input type="text" id="lastNameText" class = "addText" placeholder="Last Name"></nobr>
+        <nobr><h5 class = "inputPrompt">Phone </h5><h5 class="requiredStar">*</h5><input type="text" id="phoneText" class = "addText" placeholder="Phone #: XXX-XXX-XXXX"></nobr>
+        <nobr><h5 class = "inputPrompt">Email </h5><h5 class="requiredStar">*</h5><input type="text" id="emailText" class = "addText" placeholder="Email: example@gmail.com"></nobr>
         <script>
             document.getElementById("emailText").onkeyup = function(e)
             {
