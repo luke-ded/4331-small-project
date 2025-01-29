@@ -324,7 +324,7 @@ function searchContact()
 	{
 		xhr.onreadystatechange = function() 
 		{
-			if (this.readyState == 4 && this.status == 200) 
+			if ((this.readyState == 4 || this.readyState == 3) && this.status == 200) 
 			{
 				let tableData = "";
 				let jsonObject = JSON.parse( xhr.responseText );
@@ -343,9 +343,7 @@ function searchContact()
 				
 				document.getElementById("SearchTable").innerHTML=tableData;
 				
-			} else {
-				document.getElementById("tableHeader").innerHTML = this.status;
-			}
+			} 
 		};
 		xhr.send(jsonPayload);
 
