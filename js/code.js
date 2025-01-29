@@ -328,7 +328,7 @@ function searchContact()
 			{
 				let tableData = "";
 				let jsonObject = JSON.parse( xhr.responseText );
-				let len = <jsonObject.results.length;
+				
 				
 				for( let i=0; i<jsonObject.results.length; i++ )
 				{	
