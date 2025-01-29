@@ -333,14 +333,16 @@ function searchContact()
 				for( let i=0; i<jsonObject.results.length; i++ )
 				{	
 					//name
-					tableData += `<tr><td> ${jsonObject.results[i].FirstName} ${jsonObject.results[i].LastName} len</td>`
+					tableData += `<tr><td> ${jsonObject.results[i].FirstName} ${jsonObject.results[i].LastName} </td>`
 					//Email
 					tableData += `<td> ${jsonObject.results[i].Email} </td>`
 					//Phone
 					tableData += `<td> ${jsonObject.results[i].Phone} </td></tr>`
 				}
 
-				
+				if (tableData.length == 0){
+					document.getElementById("SearchTable").innerHTML = len;
+				}
 				document.getElementById("SearchTable").innerHTML=tableData;
 			}
 		};
