@@ -338,7 +338,8 @@ function searchContact()
 					//Phone
 					tableData += `<td> ${jsonObject.results[i].Phone} </td></tr>`
 				}
-				
+
+				document.getElementById("SearchTable").innerHTML.style.color = "red";
 				document.getElementById("SearchTable").innerHTML=tableData;
 			}
 		};
