@@ -340,9 +340,7 @@ function searchContact()
 					tableData += `<td> ${jsonObject.results[i].Phone} </td></tr>`
 				}
 
-				if (tableData.length == 0){
-					document.getElementById("SearchTable").innerHTML = len;
-				}
+				
 				document.getElementById("SearchTable").innerHTML=tableData;
 			}
 		};
