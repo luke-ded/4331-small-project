@@ -344,7 +344,7 @@ function searchContact()
 				document.getElementById("SearchTable").innerHTML=tableData;
 				
 			} else {
-				document.getElementById("tableHeader").innerHTML = this.readyState;
+				document.getElementById("tableHeader").innerHTML = this.status;
 			}
 		};
 		xhr.send(jsonPayload);
