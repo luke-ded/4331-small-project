@@ -287,13 +287,13 @@ function addContact()
 function removeContact()
 {
 	let rowIndex = document.getElementById("SearchTable").rowIndex;
-
-	let fullName = document.getElementById("Name").rowIndex.value;
+	let row = table.rows[rowIndex];
+	let fullName = row.cells[0].textContent.trim();
 	const myArray = fullName.split(" ");
 	let firstName = myArray[0]
 	let lastName = myArray[1];
-	let phone = document.getElementById("Phone Number").rowIndex.value;
-	let email = document.getElementById("Email").rowIndex.value;
+	let email = row.cells[1].textContent.trim();
+	let phone = row.cells[2].textContent.trim();
 
 	let tmp = {firstName:firstName, lastName:lastName, phone:phone, email:email,userId:userId};
 	let jsonPayload = JSON.stringify( tmp );
