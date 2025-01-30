@@ -443,4 +443,9 @@ td, th
     width:fit-content;
     padding:5px;
     font-size: 20px;
+    border-radius: 5px;
+    border: 1px solid aquamarine;
+    background:transparent;
+    font-family: Arial, Helvetica, sans-serif;
+    color:aquamarine;
 }
