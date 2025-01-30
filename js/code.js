@@ -339,7 +339,7 @@ function searchContact()
 					//Phone
 					tableData += `<td> ${jsonObject.results[i].Phone} </td>`
      
-     					talbeData += `<td> <button type="button" id="searchContactButton" class="addbutton" onclick="searchContact();"> Search </button></td></tr>`
+     					tableData += `<td> <button type="button" id="searchContactButton" class="addbutton" onclick="searchContact();"> Search </button></td></tr>`
 
 				}
 
