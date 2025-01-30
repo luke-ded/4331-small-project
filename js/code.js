@@ -342,7 +342,6 @@ function searchContact()
 
 				
 				document.getElementById("SearchTable").innerHTML=tableData;
-				document.getElementById("SearchTable").insertCell(4).innerHTML ='<button onclick="removeContact()">Delete</button>;
 				
 			} 
 		};
