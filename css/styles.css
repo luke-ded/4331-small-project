@@ -436,6 +436,16 @@ td, th
     color:red;
 }
 
+.removebutton
+{ 
+    border-radius: 5px;
+    border: 1px solid aquamarine;
+    background:transparent;
+    font-family: Arial, Helvetica, sans-serif;
+    color:aquamarine;
+}
+
+
 #removeBtn
 {
     display:inline;
@@ -444,8 +454,4 @@ td, th
     padding:5px;
     font-size: 20px;
     border-radius: 5px;
-    border: 1px solid aquamarine;
-    background:transparent;
-    font-family: Arial, Helvetica, sans-serif;
-    color:aquamarine;
 }
