@@ -337,9 +337,7 @@ function searchContact()
 					//Email
 					tableData += `<td> ${jsonObject.results[i].Email} </td>`
 					//Phone
-					tableData += `<td> ${jsonObject.results[i].Phone} </td>
-     	
-      					tableData += `<td> <button class="deletebtn">Delete</button> </td></tr>`
+					tableData += `<td> ${jsonObject.results[i].Phone} </td></tr>`
 				}
 
 				
