@@ -328,30 +328,21 @@ function searchContact()
 			{
 				let tableData = "";
 				let jsonObject = JSON.parse( xhr.responseText );
-				let table = document.getElementById("SearchTable");
+				
 				
 				for( let i=0; i<jsonObject.results.length; i++ )
 				{	
 					//name
-					//tableData += `<tr><td> ${jsonObject.results[i].FirstName} ${jsonObject.results[i].LastName} </td>`
+					tableData += `<tr><td> ${jsonObject.results[i].FirstName} ${jsonObject.results[i].LastName} </td>`
 					//Email
-					//tableData += `<td> ${jsonObject.results[i].Email} </td>`
+					tableData += `<td> ${jsonObject.results[i].Email} </td>`
 					//Phone
-					//tableData += `<td> ${jsonObject.results[i].Phone} </td></tr>`
+					tableData += `<td> ${jsonObject.results[i].Phone} </td></tr>`
 
-					let newRow = table.insertRow(4);
-					//name
-					newRow.insertCell(0).innerHTML = ${jsonObject.results[i].FirstName} ${jsonObject.results[i].LastName};
-					//Email
-					newRow.insertCell(1).innerHTML = ${jsonObject.results[i].Email};
-					//Phone
-					newRow.insertCell(2).innerHTML = ${jsonObject.results[i].Phone};
-					//deleteButton
-					//newRow.insertCell(3).innerHTML = '<button onclick = "removeContact()"> Delete </button>;
 				}
 
 				
-				//document.getElementById("SearchTable").innerHTML=tableData;
+				document.getElementById("SearchTable").innerHTML=tableData;
 				
 			} 
 		};
