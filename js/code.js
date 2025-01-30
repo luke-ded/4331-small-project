@@ -297,7 +297,10 @@ function removeContact()
 	let lastName = words[1];
 	let email = words[2];
 	let phone = words[3];
-
+	console.log(firstName);
+	console.log(lastName);
+	console.log(email);
+	console.log(phone);
 	let tmp = {firstName:firstName, lastName:lastName, phone:phone, email:email,userId:userId};
 	let jsonPayload = JSON.stringify( tmp );
 	
