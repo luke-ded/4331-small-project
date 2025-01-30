@@ -287,6 +287,35 @@ function addContact()
 function removeContact()
 {
 	let rowIndex = document.getElementById("SearchTable").rowIndex;
+
+	let firstName = document.getElementById("firstNameText").rowIndex.value;
+	let lastName = document.getElementById("lastNameText").rowIndex.value;
+	let phone = document.getElementById("phoneText").rowIndex.value;
+	let email = document.getElementById("emailText").rowIndex.value;
+
+	let tmp = {firstName:firstName, lastName:lastName, phone:phone, email:email,userId:userId};
+	let jsonPayload = JSON.stringify( tmp );
+
+	let url = urlBase + '/DeleteContact.' + extension;
+	
+	let xhr = new XMLHttpRequest();
+	xhr.open("POST", url, true);
+	xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
+
+	try
+	{
+		xhr.onreadystatechange = function() 
+		{
+			
+		};
+		xhr.send(jsonPayload);
+
+	}
+	catch(err)
+	{
+		
+	}
+	
 	document.getElementById("SearchTable").deleteRow(rowIndex);
 	
 }
