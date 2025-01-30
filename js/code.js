@@ -287,7 +287,7 @@ function addContact()
 function removeContact()
 {
 	let rowIndex = document.getElementById("SearchTable").rowIndex;
-	document.getElementById("searchTable").deleteRow(rowIndex);
+	document.getElementById("SearchTable").deleteRow(rowIndex);
 	
 }
 
