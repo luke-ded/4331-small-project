@@ -286,9 +286,19 @@ function addContact()
 
 function removeContact()
 {
-	let rowIndex = document.getElementById("SearchTable").rowIndex;
+	let Index = document.getElementById("SearchTable").rowIndex;
+	let data = document.getElementById("myTable").rows.item(Index).innerHTML;
+    	data = data.replaceAll(/<\/td>/g, " ");
+    	data = data.replaceAll(/<td>/g, " ");
+    	data = data.trim();
+    	const words = data.split(/\s+/);  
+
+	let FirstName = words[0];
+	let LastName = words[1];
+	let Email = words[2];
+	let Phone = words[3];
 	
-	document.getElementById("SearchTable").deleteRow(rowIndex);
+	document.getElementById("SearchTable").deleteRow(Index);
 	
 }
 
