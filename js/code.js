@@ -288,10 +288,12 @@ function removeContact()
 {
 	let rowIndex = document.getElementById("SearchTable").rowIndex;
 
-	let firstName = document.getElementById("firstNameText").rowIndex.value;
-	let lastName = document.getElementById("lastNameText").rowIndex.value;
-	let phone = document.getElementById("phoneText").rowIndex.value;
-	let email = document.getElementById("emailText").rowIndex.value;
+	let fullName = document.getElementById("Name").rowIndex.value;
+	const myArray = fullName.split(" ");
+	let firstName = myArray[0]
+	let lastName = myArray[1];
+	let phone = document.getElementById("Phone Number").rowIndex.value;
+	let email = document.getElementById("Email").rowIndex.value;
 
 	let tmp = {firstName:firstName, lastName:lastName, phone:phone, email:email,userId:userId};
 	let jsonPayload = JSON.stringify( tmp );
