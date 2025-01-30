@@ -289,9 +289,9 @@ function removeContact()
 	let rowIndex = document.getElementById("SearchTable").rowIndex;
 	var row = document.getElementById("SearchTable").getElementsByTagName('tr')[rowIndex];
 	
-	var name = row.children[0];
-	var email = row.children[1];
-	var phone = row.children[2];
+	var name = row.getElementsByTagName('th')[0];
+	var email = row.getElementsByTagName('th')[1];
+	var phone = row.getElementsByTagName('th')[2];
 	document.getElementById("SearchTable").deleteRow(rowIndex);
 	
 }
