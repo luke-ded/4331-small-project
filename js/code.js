@@ -307,7 +307,6 @@ function removeContact()
 	xhr.open("POST", url, true);
 	xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
 	
-	document.getElementById("SearchTable").deleteRow(Index);
 	try
 	{
 		xhr.onreadystatechange = function() 
@@ -322,6 +321,8 @@ function removeContact()
 	{
 		document.getElementById("searchText").innerHTML = err.message;
 	}
+
+	document.getElementById("SearchTable").deleteRow(Index);
 }
 
 
