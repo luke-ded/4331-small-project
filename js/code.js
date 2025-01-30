@@ -347,7 +347,7 @@ function searchContact()
 					//Phone
 					newRow.insertCell(2).innerHTML = ${jsonObject.results[i].Phone};
 					//deleteButton
-					newRow.insertCell(3).innerHTML = '<button onclick = "removeContact()"> Delete </button>;
+					//newRow.insertCell(3).innerHTML = '<button onclick = "removeContact()"> Delete </button>;
 				}
 
 				
