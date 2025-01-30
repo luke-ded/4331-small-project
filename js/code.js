@@ -287,7 +287,7 @@ function addContact()
 function removeContact()
 {
 	let rowIndex = document.getElementById("SearchTable").rowIndex;
-	var x = document.getElementById("searchTable").rows[rowIndex].cells;
+	var x = document.getElementById("SearchTable").rows[rowIndex].cells;
 	let name = x[0];
 	const myArray = name.split(" ");
 	let firstName = myArray[0];
