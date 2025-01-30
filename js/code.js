@@ -314,6 +314,7 @@ function removeContact()
 			if (this.readyState == 4 && this.status == 200) 
 			{
 				console.log("contact is deleted");
+				document.getElementById("SearchTable").deleteRow(Index);
 			}
 		};
 		xhr.send(jsonPayload);
@@ -325,7 +326,6 @@ function removeContact()
 		document.getElementById("searchText").innerHTML = err.message;
 	}
 
-	document.getElementById("SearchTable").deleteRow(Index);
 }
 
 
