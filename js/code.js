@@ -293,13 +293,35 @@ function removeContact()
     	data = data.trim();
     	const words = data.split(/\s+/);  
 
-	let FirstName = words[0];
-	let LastName = words[1];
-	let Email = words[2];
-	let Phone = words[3];
+	let firstName = words[0];
+	let lastName = words[1];
+	let email = words[2];
+	let phone = words[3];
+
+	let tmp = {firstName:firstName, lastName:lastName, phone:phone, email:email,userId:userId};
+	let jsonPayload = JSON.stringify( tmp );
+	
+	let url = urlBase + '/DeleteContact.' + extension;
+	
+	let xhr = new XMLHttpRequest();
+	xhr.open("POST", url, true);
+	xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
 	
 	document.getElementById("SearchTable").deleteRow(Index);
-	
+	try
+	{
+		xhr.onreadystatechange = function() 
+		{
+			
+		};
+		xhr.send(jsonPayload);
+
+
+	}
+	catch(err)
+	{
+		document.getElementById("searchText").innerHTML = err.message;
+	}
 }
 
 
