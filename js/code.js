@@ -286,14 +286,8 @@ function addContact()
 
 function removeContact()
 {
-	let firstName = document.getElementById("firstNameText").value;
-	let phone = document.getElementById("phoneText").value;
-
-	if (firstName.length == 0) {
-		
-		return;
-	}
-
+	let rowIndex = document.getElementById("SearchTable").rowIndex;
+	document.getElementById("searchTable").deleteRow(rowIndex);
 	
 }
 
