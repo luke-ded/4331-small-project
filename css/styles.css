@@ -445,6 +445,11 @@ td, th
     color:aquamarine;
 }
 
+.removebutton:hover
+{
+    border-color: rgb(0, 157, 255);
+    color:rgb(0, 157, 255);
+}
 
 #removeBtn
 {
