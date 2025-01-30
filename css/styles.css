@@ -451,3 +451,9 @@ td, th
     padding:5px;
     font-size: 20px;
 }
+
+.remove:hover
+{
+    border-color: rgb(0, 157, 255);
+    color:rgb(0, 157, 255);
+}
