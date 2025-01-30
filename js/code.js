@@ -287,7 +287,7 @@ function addContact()
 function removeContact()
 {
 	let Index = document.getElementById("SearchTable").rowIndex;
-	let data = document.getElementById("myTable").rows.item(Index).innerHTML;
+	let data = document.getElementById("SearchTable").rows.item(Index).innerHTML;
     	data = data.replaceAll(/<\/td>/g, " ");
     	data = data.replaceAll(/<td>/g, " ");
     	data = data.trim();
