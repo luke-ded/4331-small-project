@@ -299,7 +299,7 @@ function removeContact()
 	let email = words[2];
 	let phone = words[3];
 
-	let index = Number(Index);
+	let index = parseInt(Index);
 	
 	console.log(contactId[0]);
 	console.log(index);
