@@ -2,7 +2,7 @@ const urlBase = 'http://projectpoosd.xyz/api';
 const extension = 'php';
 
 let userId = 0;
-const contactId = [];
+let contactId = [];
 let firstName = "";
 let lastName = "";
 let symbol = false;
