@@ -30,13 +30,24 @@
 
 .inputPrompt
 {
-    display: inline;
-    font-size: 20px;
+    float:left;
+    margin-top:35px;
+    line-height: 0px;
+    font-size: 15px;
     font-family: Arial, Helvetica, sans-serif;
     color:aquamarine;
-    margin:0;
 }
 
+.requiredStar
+{
+    float:left;
+    margin-top:35px;
+    margin-left:2px;
+    line-height:0px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color:red;
+}
 
 .loginbutton
 {
@@ -190,23 +201,10 @@
     opacity: 50%;
 }
 
-#firstName
-{
-    margin-right:10%;
-    font-size: 25px;
-}
 
-#lastName
-{
-    margin-top:5%;
-    margin-right:10%;
-    font-size: 25px;
-}
 #loginName
 {
-    margin-top:5%;
-    margin-right:10%;
-    margin-left:3%;
+    width:100%;
     border-radius: 3px;
     border-width: 0;
 	font-size: 25px;
@@ -214,9 +212,8 @@
 
 #loginPassword
 {
-    margin-top:5%;
-    margin-right:10%;
-    margin-left:3%;
+    margin-top:0%;
+    width:100%;
     border-radius: 3px;
     border-width: 0;
 	font-size: 25px; 
@@ -224,10 +221,7 @@
 
 #loginPassword2
 {
-    margin-top:5%;
-    margin-right:10%;
-    margin-left:3%;
-    width:51%;
+    width:100%;
     border-radius: 3px;
     border-width: 0;
     font-size: 25px; 
@@ -247,13 +241,12 @@ input[type="text"],input[type="password"]
 
 .addText
 {
-    display:inline;
-
-    margin-top:3%;
-    margin-left:2%;
-    width:80%;
+    
+    width:100%;
     height: 10px;
-    padding: 10px;
+    margin-top: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     border-radius: 3px;
     border-width: 0;
 	font-size: 25px;
@@ -427,16 +420,6 @@ td, th
   	text-align: left;
   	padding: 5px;
 }
-
-.requiredStar
-{
-    display:inline;
-    font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    color:red;
-}
-
-
 
 #remove
 {
