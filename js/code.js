@@ -2,7 +2,6 @@ const urlBase = 'http://projectpoosd.xyz/api';
 const extension = 'php';
 
 let userId = 0;
-let contactId = [];
 let firstName = "";
 let lastName = "";
 let symbol = false;
@@ -285,18 +284,12 @@ function addContact()
 	
 }
 
-function removeContact()
+function removeContact(contactId)
 {
 	let Index = document.getElementById("SearchTable").rowIndex;
 	let data = document.getElementById("SearchTable").rows.item(Index).innerHTML;
     	
-	let i = 0;
-	for ( i= 0; i < 10000; i++){
-		if (document.getElementById("SearchTable").rows.item(i).innerHTML == data){
-			break;
-		}
-	}
-	let tmp = {userId:userId, contactId: contactId[i]};
+	let tmp = {userId:userId, contactId: contactId};
 	let jsonPayload = JSON.stringify( tmp );
 	
 	let url = urlBase + '/DeleteContact.' + extension;
@@ -360,7 +353,7 @@ function searchContact()
 				for( let i=0; i<jsonObject.results.length; i++ )
 				{	
 
-					contactId[i] = jsonObject.results[i].ContactId;
+					//jsonObject.results[i].ContactId;
 					
 					//name
 					tableData += `<tr><td> ${jsonObject.results[i].FirstName} ${jsonObject.results[i].LastName} </td>`
@@ -369,7 +362,7 @@ function searchContact()
 					//Phone
 					tableData += `<td> ${jsonObject.results[i].Phone} </td>`
      
-     					tableData += `<td> <button type="button" id="remove" onclick="removeContact();"> Delete </button></td></tr>`
+     					tableData += `<td> <button type="button" id="remove" onclick="removeContact(jsonObject.results[i].ContactId);"> Delete </button></td></tr>`
 
 				}
 
