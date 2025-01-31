@@ -364,7 +364,7 @@ function searchContact()
 				for( let i=0; i<jsonObject.results.length; i++ )
 				{	
 
-					contactId[i] = ${jsonObject.results[i].ContactId};
+					contactId[i] = jsonObject.results[i].ContactId;
 					
 					//name
 					tableData += `<tr><td> ${jsonObject.results[i].FirstName} ${jsonObject.results[i].LastName} </td>`
