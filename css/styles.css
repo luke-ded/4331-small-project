@@ -31,7 +31,7 @@
 .inputPrompt
 {
     float:left;
-    margin-top:35px;
+    margin-top:1.7em;
     line-height: 0px;
     font-size: 15px;
     font-family: Arial, Helvetica, sans-serif;
@@ -41,7 +41,7 @@
 .requiredStar
 {
     float:left;
-    margin-top:35px;
+    margin-top:1.25em;
     margin-left:2px;
     line-height:0px;
     font-size: 20px;
@@ -100,7 +100,7 @@
     bottom:0;
     left:0;
     right:0;
-    margin-top:15%;
+    margin-top:12%;
     margin-left:35%;
     border: 1px solid aquamarine;
     border-radius: 3px;
@@ -229,8 +229,10 @@
 
 #searchText
 {
+    float:left;
+    margin-top:5%;
+    width:85%;
 	font-size: 25px;
-	color: rgb(219,171,37);
 }
 
 input[type="text"],input[type="password"]
@@ -264,8 +266,9 @@ input[type="text"],input[type="password"]
 #searchContactButton
 {
     display:inline;
+    margin-top:4.5%;
     margin-left: 2%;
-    width:fit-content;
+    width:13%;
     padding:5px;
     font-size: 20px;
 }
