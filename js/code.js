@@ -2,7 +2,7 @@ const urlBase = 'http://projectpoosd.xyz/api';
 const extension = 'php';
 
 let userId = 0;
-let contactId = 0;
+const contactId = [];
 let firstName = "";
 let lastName = "";
 let symbol = false;
@@ -299,7 +299,7 @@ function removeContact()
 	let email = words[2];
 	let phone = words[3];
 	
-	let tmp = {userId:userId};
+	let tmp = {userId:userId, contactId: contactId[Index]};
 	let jsonPayload = JSON.stringify( tmp );
 	
 	let url = urlBase + '/DeleteContact.' + extension;
@@ -364,6 +364,7 @@ function searchContact()
 				for( let i=0; i<jsonObject.results.length; i++ )
 				{	
 
+					contactId[i] = ${jsonObject.results[i].ContactId};
 					
 					//name
 					tableData += `<tr><td> ${jsonObject.results[i].FirstName} ${jsonObject.results[i].LastName} </td>`
