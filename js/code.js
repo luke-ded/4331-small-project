@@ -289,7 +289,7 @@ function removeContact()
 {
 	let Index = document.getElementById("SearchTable").rowIndex;
 	let data = document.getElementById("SearchTable").rows.item(Index).innerHTML;
-    	data = data.replaceAll(/<\/td>/g, " ");
+    	/*data = data.replaceAll(/<\/td>/g, " ");
     	data = data.replaceAll(/<td>/g, " ");
     	data = data.trim();
     	const words = data.split(/\s+/);  
@@ -297,11 +297,17 @@ function removeContact()
 	let firstName = words[0];
 	let lastName = words[1];
 	let email = words[2];
-	let phone = words[3];
+	let phone = words[3];*/
+	let i = 0;
+	for ( i= 0; i < 10000; i++){
+		if (document.getElementById("SearchTable").rows.item(i).innerHTML == data){
+			break;
+		}
+	}
 
-	let index = parseInt(Index);
+	let index = i
 	
-	console.log(contactId[0]);
+	console.log(contactId[i]);
 	console.log(index);
 	console.log(contactId[index]);
 	let tmp = {userId:userId, contactId: contactId[Index]};
