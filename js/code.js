@@ -316,10 +316,10 @@ function removeContact()
 			{
 				console.log("contact is deleted");
 				document.getElementById("SearchTable").deleteRow(Index);
-				xhr.send(jsonPayload);
+				
 			}
 		};
-		
+		xhr.send(jsonPayload);
 	}
 	catch(err)
 	{
