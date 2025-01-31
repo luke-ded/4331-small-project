@@ -289,27 +289,13 @@ function removeContact()
 {
 	let Index = document.getElementById("SearchTable").rowIndex;
 	let data = document.getElementById("SearchTable").rows.item(Index).innerHTML;
-    	/*data = data.replaceAll(/<\/td>/g, " ");
-    	data = data.replaceAll(/<td>/g, " ");
-    	data = data.trim();
-    	const words = data.split(/\s+/);  
-
-	let firstName = words[0];
-	let lastName = words[1];
-	let email = words[2];
-	let phone = words[3];*/
+    	
 	let i = 0;
 	for ( i= 0; i < 10000; i++){
 		if (document.getElementById("SearchTable").rows.item(i).innerHTML == data){
 			break;
 		}
 	}
-
-	let index = i
-	
-	console.log(contactId[i]);
-	console.log(index);
-	console.log(contactId[index]);
 	let tmp = {userId:userId, contactId: contactId[i]};
 	let jsonPayload = JSON.stringify( tmp );
 	
@@ -325,7 +311,6 @@ function removeContact()
 		{
 			if (this.readyState == 4 && this.status == 200) 
 			{
-				console.log("contact is deleted");
 				document.getElementById("SearchTable").deleteRow(Index);
 				
 			}
@@ -376,8 +361,6 @@ function searchContact()
 				{	
 
 					contactId[i] = jsonObject.results[i].ContactId;
-					console.log(contactId[i]);
-					console.log(jsonObject.results[i].ContactId);
 					
 					//name
 					tableData += `<tr><td> ${jsonObject.results[i].FirstName} ${jsonObject.results[i].LastName} </td>`
