@@ -285,7 +285,7 @@ function addContact()
 	
 }
 
-function removeContact(contactNum)
+function removeContact()
 {
 	let Index = document.getElementById("SearchTable").rowIndex;
 	let data = document.getElementById("SearchTable").rows.item(Index).innerHTML;
@@ -299,7 +299,7 @@ function removeContact(contactNum)
 	let email = words[2];
 	let phone = words[3];
 	
-	let tmp = {userId:userId, contactId: contactNum};
+	let tmp = {userId:userId};
 	let jsonPayload = JSON.stringify( tmp );
 	
 	let url = urlBase + '/DeleteContact.' + extension;
@@ -364,7 +364,7 @@ function searchContact()
 				for( let i=0; i<jsonObject.results.length; i++ )
 				{	
 
-					let contactNum = ${jsonObject.results[i].contactId};
+					
 					//name
 					tableData += `<tr><td> ${jsonObject.results[i].FirstName} ${jsonObject.results[i].LastName} </td>`
 					//Email
@@ -372,7 +372,7 @@ function searchContact()
 					//Phone
 					tableData += `<td> ${jsonObject.results[i].Phone} </td>`
      
-     					tableData += `<td> <button type="button" id="remove" onclick="removeContact(contactNum);"> Delete </button></td></tr>`
+     					tableData += `<td> <button type="button" id="remove" onclick="removeContact();"> Delete </button></td></tr>`
 
 				}
 
