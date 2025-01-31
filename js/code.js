@@ -299,7 +299,7 @@ function removeContact()
 	let email = words[2];
 	let phone = words[3];
 	
-	let tmp = {firstName:firstName, lastName:lastName, phone:phone, email:email,userId:userId, contactId:contactId};
+	let tmp = {firstName:firstName, lastName:lastName, phone:phone, email:email,userId:userId};
 	let jsonPayload = JSON.stringify( tmp );
 	
 	let url = urlBase + '/DeleteContact.' + extension;
