@@ -299,9 +299,11 @@ function removeContact()
 	let email = words[2];
 	let phone = words[3];
 
+	let index = Number(Index);
+	
 	console.log(contactId[0]);
-	console.log(Index);
-	console.log(contactId[Index]);
+	console.log(index);
+	console.log(contactId[index]);
 	let tmp = {userId:userId, contactId: contactId[Index]};
 	let jsonPayload = JSON.stringify( tmp );
 	
