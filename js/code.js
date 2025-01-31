@@ -310,7 +310,7 @@ function removeContact()
 	console.log(contactId[i]);
 	console.log(index);
 	console.log(contactId[index]);
-	let tmp = {userId:userId, contactId: contactId[Index]};
+	let tmp = {userId:userId, contactId: contactId[i]};
 	let jsonPayload = JSON.stringify( tmp );
 	
 	let url = urlBase + '/DeleteContact.' + extension;
