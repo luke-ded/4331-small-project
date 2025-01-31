@@ -79,6 +79,7 @@
 
 .loginbutton:hover
 {
+    background-color: rgba(255, 255, 255, 0.1);
     border-color: rgb(0, 157, 255);
     color:rgb(0, 157, 255);
 }
@@ -129,6 +130,7 @@
 
 .dologinbutton:hover
 {
+    background-color: rgba(255, 255, 255, 0.1);
     border-color: rgb(0, 157, 255);
     color:rgb(0, 157, 255);
 }
@@ -150,6 +152,7 @@
 
 .logoutButton:hover
 {
+    background-color: rgba(255, 255, 255, 0.1);
     border-color: rgb(0, 157, 255);
     color:rgb(0, 157, 255);
 }
@@ -185,22 +188,6 @@
     text-align:center;
     color:aquamarine;
 }
-
-.buttons
-{   
-    margin-left: 25%;
-    border-radius: 25px;
-    width: 50%;  
-    font-size: 30px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.buttons:hover{
-    background-color: #00d5124f;
-    color: #FFFFFF;
-    opacity: 50%;
-}
-
 
 #loginName
 {
@@ -282,6 +269,7 @@ input[type="text"],input[type="password"]
 
 .addbutton:hover
 {
+    background-color: rgba(255, 255, 255, 0.1);
     border-color: rgb(0, 157, 255);
     color:rgb(0, 157, 255);
 }
@@ -320,6 +308,7 @@ input[type="text"],input[type="password"]
 
 .actionBtn:hover
 {
+    background-color: rgba(255, 255, 255, 0.1);
     border-color: rgb(0, 157, 255);
     color:rgb(0, 157, 255);
 }
@@ -440,6 +429,7 @@ td, th
 
 #remove:hover
 {
+    background-color: rgba(255, 255, 255, 0.1);
     border-color: rgb(0, 157, 255);
     color:rgb(0, 157, 255);
 }
