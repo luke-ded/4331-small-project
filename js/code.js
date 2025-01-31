@@ -367,7 +367,7 @@ function searchContact()
 
 					contactId[i] = jsonObject.results[i].ContactId;
 					console.log(contactId[i]);
-					console.log(jsonObject.results[i].ContactId;);
+					console.log(jsonObject.results[i].ContactId);
 					
 					//name
 					tableData += `<tr><td> ${jsonObject.results[i].FirstName} ${jsonObject.results[i].LastName} </td>`
