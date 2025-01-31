@@ -298,7 +298,8 @@ function removeContact()
 	let lastName = words[1];
 	let email = words[2];
 	let phone = words[3];
-	
+
+	console.log(contactId[Index]);
 	let tmp = {userId:userId, contactId: contactId[Index]};
 	let jsonPayload = JSON.stringify( tmp );
 	
