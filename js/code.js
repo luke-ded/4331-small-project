@@ -353,7 +353,7 @@ function searchContact()
 				for( let i=0; i<jsonObject.results.length; i++ )
 				{	
 
-					//jsonObject.results[i].ContactId;
+					let x = jsonObject.results[i].ContactId;
 					
 					//name
 					tableData += `<tr><td> ${jsonObject.results[i].FirstName} ${jsonObject.results[i].LastName} </td>`
@@ -362,7 +362,7 @@ function searchContact()
 					//Phone
 					tableData += `<td> ${jsonObject.results[i].Phone} </td>`
      
-     					tableData += `<td> <button type="button" id="remove" onclick="removeContact(jsonObject.results[i].ContactId);"> Delete </button></td></tr>`
+     					tableData += `<td> <button type="button" id="remove" onclick="removeContact(x);"> Delete </button></td></tr>`
 
 				}
 
