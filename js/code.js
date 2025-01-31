@@ -362,7 +362,7 @@ function searchContact()
 					//Phone
 					tableData += `<td> ${jsonObject.results[i].Phone} </td>`
      
-     					tableData += `<td> <button type="button" id="remove" onclick="removeContact(x);"> Delete </button></td></tr>`
+     					tableData += `<td> <button type="button" id="remove" onclick="removeContact(${x});"> Delete </button></td></tr>`
 
 				}
 
