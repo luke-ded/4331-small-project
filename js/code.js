@@ -318,6 +318,13 @@ function removeContact(contactId, position)
 
 
 
+function editContact(contactId, position)
+{
+	
+}
+
+
+
 function searchContact()
 {
 	let srch = document.getElementById("searchText").value;
@@ -361,7 +368,9 @@ function searchContact()
 					//Phone
 					tableData += `<td> ${jsonObject.results[i].Phone} </td>`
      
-     					tableData += `<td> <button type="button" id="remove" onclick="removeContact(${x}, ${i});"> Delete </button></td></tr>`
+     					tableData += `<td> <button type="button" id="remove" onclick="removeContact(${x}, ${i});"> Delete </button></td>`
+	  
+   					tableData += `<td> <button type="button" id="edit" onclick="editContact(${x}, ${i});"> Edit </button></td></tr>`
 
 				}
 
