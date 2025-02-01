@@ -368,9 +368,7 @@ function searchContact()
 					//Phone
 					tableData += `<td> ${jsonObject.results[i].Phone} </td>`
      
-     					tableData += `<td> <button type="button" id="remove" onclick="removeContact(${x}, ${i});"> Delete </button></td>`
-	  
-   					tableData += `<td> <button type="button" id="edit" onclick="editContact(${x}, ${i});"> Edit </button></td></tr>`
+     					tableData += `<td> <button type="button" id="remove" onclick="removeContact(${x}, ${i});"> Delete </button> + <button type="button" id="edit" onclick="editContact(${x}, ${i});"> Edit </button> </td></tr>`
 
 				}
 
