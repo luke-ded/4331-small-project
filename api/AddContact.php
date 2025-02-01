@@ -17,12 +17,25 @@
 	} 
 	else
 	{
-		$stmt = $conn->prepare("INSERT INTO Contacts (UserId,FirstName,LastName,Phone,Email) VALUES(?,?,?,?,?)");
+		$stmt = $conn->prepare("SELECT ID FROM Contacts WHERE UserId=? AND FirstName=? AND LastName=? AND Phone=? AND Email=?");
 		$stmt->bind_param("issss", $userId, $fname, $lname, $phone, $email);
 		$stmt->execute();
+		$result = $stmt->get_result();
+		
+		if( $row = $result->fetch_assoc() )
+		{
+			returnWithError("Contact Already Exists");
+		}
+		else
+		{
+			$stmt = $conn->prepare("INSERT INTO Contacts (UserId,FirstName,LastName,Phone,Email) VALUES(?,?,?,?,?)");
+			$stmt->bind_param("issss", $userId, $fname, $lname, $phone, $email);
+			$stmt->execute();
+			returnWithError("");
+		}
+		
 		$stmt->close();
 		$conn->close();
-		returnWithError("");
 	}
 	
 ?>
