@@ -284,10 +284,9 @@ function addContact()
 	
 }
 
-function removeContact(contactId)
+function removeContact(contactId, position)
 {
-	let Index = document.getElementById("SearchTable").rowIndex;
-	let data = document.getElementById("SearchTable").rows.item(Index).innerHTML;
+	let Index = position;
     	
 	let tmp = {userId:userId, contactId: contactId};
 	let jsonPayload = JSON.stringify( tmp );
@@ -362,7 +361,7 @@ function searchContact()
 					//Phone
 					tableData += `<td> ${jsonObject.results[i].Phone} </td>`
      
-     					tableData += `<td> <button type="button" id="remove" onclick="removeContact(${x});"> Delete </button></td></tr>`
+     					tableData += `<td> <button type="button" id="remove" onclick="removeContact(${x}, ${i});"> Delete </button></td></tr>`
 
 				}
 
