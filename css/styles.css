@@ -451,6 +451,29 @@ td, th
 }
 
 
+.button
+{
+    border-radius: 5px;
+    border: 1px solid aquamarine;
+    background:transparent;
+    font-family: Arial, Helvetica, sans-serif;
+    color:aquamarine;
+    display:inline;
+    margin-left: 5%;
+    width:fit-content;
+    padding:5px;
+    font-size: 20px;
+	
+}
+
+.button:hover
+{
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgb(0, 157, 255);
+    color:rgb(0, 157, 255);
+}
+
+
 
 
 .removemodal {
