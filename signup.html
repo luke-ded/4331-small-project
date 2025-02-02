@@ -35,14 +35,14 @@
       <input type="text" id="lastName" placeholder="Last Name"/><br /> -->
       <nobr><h5 class="inputPrompt">Username </h5><h5 class="requiredStar">*</h5><input type="text" id="loginName" placeholder="Username" /></nobr><br />
       <nobr><h5 class="inputPrompt">Password </h5><h5 class="requiredStar">*</h5><input type="password" id="loginPassword" placeholder="Password"/></nobr><br />
-      <nobr><h5 class="inputPrompt">Confirm Password </h5><h5 class="requiredStar">*</h5><input type="password" id="loginPassword2" placeholder="Password"/></nobr><br />
+      <nobr><h5 class="inputPrompt">Confirm Password </h5><h5 class="requiredStar">*</h5><input type="password" id="loginPassword2" placeholder="Confirm Password"/></nobr><br />
 
       <script type="text/javascript">
         document.getElementById("loginPassword").onclick = function()
         {
           setPassInst();
         }
-        document.getElementById("loginPassword").onkeyup = function(e)
+        document.getElementById("loginPassword2").onkeyup = function(e)
         {
           validatePassword();
           if(e.key == 'Enter') doSignup();
