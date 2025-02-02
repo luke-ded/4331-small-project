@@ -356,9 +356,9 @@ function editContact(c, ID)
 		let updatedPhone = document.getElementById("editphoneText").value;
 		let updatedEmail = document.getElementById("editemailText").value;
 
-		console.log("Updated values:" + ID);
+		//console.log("Updated values:" + ID);
 
-		let tmp = {firstName:updatedFirstName, lastName:updatedLastName, phone:updatedPhone, email:updatedEmail, userId:userId, contactId: contactObj.ContactId};
+		let tmp = {firstName:updatedFirstName, lastName:updatedLastName, phone:updatedPhone, email:updatedEmail, userId:userId, contactId: ID};
 		let jsonPayload = JSON.stringify( tmp );
 		
 		let url = urlBase + '/UpdateContact.' + extension;
@@ -372,9 +372,9 @@ function editContact(c, ID)
 			{
 				if (this.readyState == 4 && this.status == 200) 
 				{
-					document.getElementById(`name-${contactObj.ContactId}`).innerText = `${updatedFirstName} ${updatedLastName}`;
-					document.getElementById(`email-${contactObj.ContactId}`).innerText = `${updatedEmail}`;
-					document.getElementById(`phone-${contactObj.ContactId}`).innerText = `${updatedPhone}`;
+					document.getElementById(`name-${ID}`).innerText = `${updatedFirstName} ${updatedLastName}`;
+					document.getElementById(`email-${ID}`).innerText = `${updatedEmail}`;
+					document.getElementById(`phone-${ID}`).innerText = `${updatedPhone}`;
 
 					modal.style.display = "none";	
 				}
@@ -449,9 +449,9 @@ function searchContact()
 				
 				document.getElementById("SearchTable").innerHTML=tableData;
 				
-			} 
+			}
+			xhr.send(jsonPayload); 
 		};
-		xhr.send(jsonPayload);
 
 		document.getElementById("searchText").value = "";
 	}
