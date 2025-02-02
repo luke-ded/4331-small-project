@@ -332,19 +332,19 @@ function removeContact(contactId)
 	};
 }
 
-function editContact(contactstring, ID)
+function editContact(c, ID)
 {
 	let modal = document.getElementById("Emodal");
 
 	modal.style.display = "block"
 
-	let contactData = contactstring.getAttribute("data-contact");
+	let contactData = c.getAttribute("data-contact");
 	let contactObj = JSON.parse(contactData);
 
-	document.getElementById("editfirstNameText").value = contactObj.firstName;
-	document.getElementById("editlastNameText").value = contactObj.lastName;
-	document.getElementById("editphoneText").value = contactObj.phone;
-	document.getElementById("editemailText").value = contactObj.email;
+	document.getElementById("editfirstNameText").value = contactObj.FirstName;
+	document.getElementById("editlastNameText").value = contactObj.LastName;
+	document.getElementById("editphoneText").value = contactObj.Phone;
+	document.getElementById("editemailText").value = contactObj.Email;
 
 	
 	document.getElementById("editconfirm").onclick = function()
@@ -355,7 +355,7 @@ function editContact(contactstring, ID)
 		let updatedPhone = document.getElementById("editphoneText").value;
 		let updatedEmail = document.getElementById("editemailText").value;
 
-		let tmp = {firstName:updatedFirstName, lastName:updatedLastName, phone:updatedPhone, email:updatedEmail, userId:userId, contactId: contactObj.contactId};
+		let tmp = {firstName:updatedFirstName, lastName:updatedLastName, phone:updatedPhone, email:updatedEmail, userId:userId, contactId: contactObj.ContactId};
 		let jsonPayload = JSON.stringify( tmp );
 		
 		let url = urlBase + '/UpdateContact.' + extension;
