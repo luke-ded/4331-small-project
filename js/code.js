@@ -332,16 +332,19 @@ function removeContact(contactId)
 	};
 }
 
-function editContact(Object, ID)
+function editContact(contactstring, ID)
 {
 	let modal = document.getElementById("Emodal");
 
 	modal.style.display = "block"
 
-	document.getElementById("editfirstNameText").value = Object.firstName;
-	document.getElementById("editlastNameText").value = Object.lastName;
-	document.getElementById("editphoneText").value = Object.phone;
-	document.getElementById("editemailText").value = Object.email;
+	let contactData = contactstring.getAtrribute("data-contact");
+	let contactObj = JSON.parse(contactData);
+
+	document.getElementById("editfirstNameText").value = contactObj.firstName;
+	document.getElementById("editlastNameText").value = contactObj.lastName;
+	document.getElementById("editphoneText").value = contactObj.phone;
+	document.getElementById("editemailText").value = contactObj.email;
 
 	
 	document.getElementById("editconfirm").onclick = function()
@@ -352,7 +355,7 @@ function editContact(Object, ID)
 		let updatedPhone = document.getElementById("editphoneText").value;
 		let updatedEmail = document.getElementById("editemailText").value;
 
-		let tmp = {firstName:updatedFirstName, lastName:updatedLastName, phone:updatedPhone, email:updatedEmail, userId:userId, contactId: Object.contactId};
+		let tmp = {firstName:updatedFirstName, lastName:updatedLastName, phone:updatedPhone, email:updatedEmail, userId:userId, contactId: contactObj.contactId};
 		let jsonPayload = JSON.stringify( tmp );
 		
 		let url = urlBase + '/UpdateContact.' + extension;
@@ -436,7 +439,7 @@ function searchContact()
 					tableData += `<td id = "phone-${x}"> ${jsonObject.results[i].Phone} </td>`
      
 
-					tableData += `<td> <button type="button" id="edit" onclick="editContact(${jsonObject.results[i]}, ${x});"> Edit </button></td>`
+					tableData += `<td> <button type="button" id="edit" data-contact = `${JSON.stringify(jsonObject.results[i])}` onclick="editContact(this, ${x});"> Edit </button></td>`
 
      				tableData += `<td> <button type="button" id="remove" onclick="removeContact(${x});"> Delete </button></td></tr>`
 				}
