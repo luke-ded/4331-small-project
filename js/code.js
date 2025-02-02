@@ -284,40 +284,108 @@ function addContact()
 	
 }
 
+
 function removeContact(contactId)
 {
-	let Index = document.getElementById("SearchTable").rowIndex;
-	let data = document.getElementById("SearchTable").rows.item(Index).innerHTML;
-    	
-	let tmp = {userId:userId, contactId: contactId};
-	let jsonPayload = JSON.stringify( tmp );
-	
-	let url = urlBase + '/DeleteContact.' + extension;
-	
-	let xhr = new XMLHttpRequest();
-	xhr.open("POST", url, true);
-	xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
-	
-	try
-	{
-		xhr.onreadystatechange = function() 
-		{
-			if (this.readyState == 4 && this.status == 200) 
-			{
-				document.getElementById("SearchTable").deleteRow(Index);
-				
-			}
-		};
-		xhr.send(jsonPayload);
-	}
-	catch(err)
-	{
-		document.getElementById("searchText").innerHTML = err.message;
-	}
 
+	let modal = document.getElementById("RMmodal");
+
+	modal.style.display = "block"
+
+	document.getElementById("delconfirm").onclick = function() //the confirm button is pressed
+	{
+		modal.style.display = "none";
+		
+		let Index = document.getElementById("SearchTable").rowIndex;
+		let data = document.getElementById("SearchTable").rows.item(Index).innerHTML;
+		let tmp = {userId:userId, contactId: contactId};
+		let jsonPayload = JSON.stringify( tmp );
+		
+		let url = urlBase + '/DeleteContact.' + extension;
+		
+		let xhr = new XMLHttpRequest();
+		xhr.open("POST", url, true);
+		xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
+		
+		try
+		{
+			xhr.onreadystatechange = function() 
+			{
+				if (this.readyState == 4 && this.status == 200) 
+				{
+					document.getElementById("SearchTable").deleteRow(Index);
+					
+				}
+			};
+			xhr.send(jsonPayload);
+		}
+		catch(err)
+		{
+			document.getElementById("searchText").innerHTML = err.message;
+		}
+	};
+
+	document.getElementById("delcancel").onclick = function()
+	{
+		modal.style.display = "none";
+	};
 }
 
+function editContact(Object, ID)
+{
+	let modal = document.getElementById("Emodal");
 
+	modal.style.display = "block"
+
+	document.getElementById("editfirstNameText").value = Object.firstName;
+	document.getElementById("editlastNameText").value = Object.lastName;
+	document.getElementById("editphoneText").value = Object.phone;
+	document.getElementById("editemailText").value = Object.email;
+
+	
+	document.getElementById("editconfirm").onclick = function()
+	{
+
+		let updatedFirstName = document.getElementById("editfirstNameText").value;
+		let updatedLastName = document.getElementById("editlastNameText").value;
+		let updatedPhone = document.getElementById("editphoneText").value;
+		let updatedEmail = document.getElementById("editemailText").value;
+
+		let tmp = {firstName:updatedFirstName, lastName:updatedLastName, phone:updatedPhone, email:updatedEmail, userId:userId, contactId: Object.contactId};
+		let jsonPayload = JSON.stringify( tmp );
+		
+		let url = urlBase + '/UpdateContact.' + extension;
+		
+		let xhr = new XMLHttpRequest();
+		xhr.open("POST", url, true);
+		xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
+		try
+		{
+			xhr.onreadystatechange = function() 
+			{
+				if (this.readyState == 4 && this.status == 200) 
+				{
+					document.getElementById(`name-${ID}`).innerText = `${updatedFirstName} ${updatedLastName}`;
+					document.getElementById(`email-${ID}`).innerText = `${updatedEmail}`;
+					document.getElementById(`phone-${ID}`).innerText = `${updatedPhone}`;
+
+					modal.style.display = "none";	
+				}
+			};
+			xhr.send(jsonPayload);
+		}
+		catch(err)
+		{
+			document.getElementById("searchText").innerHTML = err.message;
+		}
+	};
+
+	document.getElementById("editcancel").onclick = function()
+	{
+		modal.style.display = "none";
+	};
+
+}
 
 function searchContact()
 {
@@ -356,16 +424,16 @@ function searchContact()
 					let x = jsonObject.results[i].ContactId;
 					
 					//name
-					tableData += `<tr><td> ${jsonObject.results[i].FirstName} ${jsonObject.results[i].LastName} </td>`
+					tableData += `<tr><td id = "name-${x}"> ${jsonObject.results[i].FirstName} ${jsonObject.results[i].LastName} </td>`
 					//Email
-					tableData += `<td> ${jsonObject.results[i].Email} </td>`
+					tableData += `<td id = "email-${x}"> ${jsonObject.results[i].Email} </td>`
 					//Phone
-					tableData += `<td> ${jsonObject.results[i].Phone} </td>`
+					tableData += `<td id = "phone-${x}"> ${jsonObject.results[i].Phone} </td>`
      
-     					tableData += `<td> <button type="button" id="remove" onclick="removeContact(${x});"> Delete </button></td></tr>`
+					tableData += `<td> <button type="button" id="edit" onclick="editContact(${JSON.stringify(jsonObject.results[i])}, ${x});"> Edit </button></td>`
+     				tableData += `<td> <button type="button" id="remove" onclick="removeContact(${x});"> Delete </button></td></tr>`
 
 				}
-
 				
 				document.getElementById("SearchTable").innerHTML=tableData;
 				
