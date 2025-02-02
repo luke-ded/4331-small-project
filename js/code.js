@@ -449,9 +449,9 @@ function searchContact()
 				
 				document.getElementById("SearchTable").innerHTML=tableData;
 				
-			}
-			xhr.send(jsonPayload); 
+			} 
 		};
+		xhr.send(jsonPayload);
 
 		document.getElementById("searchText").value = "";
 	}
