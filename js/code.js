@@ -341,6 +341,7 @@ function editContact(c, ID)
 	let contactData = c.getAttribute("data-contact");
 	let contactObj = JSON.parse(contactData);
 
+	//prepopulate fields
 	document.getElementById("editfirstNameText").value = contactObj.FirstName;
 	document.getElementById("editlastNameText").value = contactObj.LastName;
 	document.getElementById("editphoneText").value = contactObj.Phone;
@@ -354,6 +355,8 @@ function editContact(c, ID)
 		let updatedLastName = document.getElementById("editlastNameText").value;
 		let updatedPhone = document.getElementById("editphoneText").value;
 		let updatedEmail = document.getElementById("editemailText").value;
+
+		console.log("Updated values:", updatedFirstName, updatedLastName, updatedPhone, updatedEmail, userId, contactObj.contactId); //testing
 
 		let tmp = {firstName:updatedFirstName, lastName:updatedLastName, phone:updatedPhone, email:updatedEmail, userId:userId, contactId: contactObj.ContactId};
 		let jsonPayload = JSON.stringify( tmp );
