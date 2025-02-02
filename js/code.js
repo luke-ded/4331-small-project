@@ -338,7 +338,7 @@ function editContact(contactstring, ID)
 
 	modal.style.display = "block"
 
-	let contactData = contactstring.getAtrribute("data-contact");
+	let contactData = contactstring.getAttribute("data-contact");
 	let contactObj = JSON.parse(contactData);
 
 	document.getElementById("editfirstNameText").value = contactObj.firstName;
