@@ -285,6 +285,7 @@ function addContact()
 }
 
 
+
 function removeContact(contactId)
 {
 
@@ -387,6 +388,10 @@ function editContact(Object, ID)
 
 }
 
+
+
+
+
 function searchContact()
 {
 	let srch = document.getElementById("searchText").value;
@@ -430,9 +435,9 @@ function searchContact()
 					//Phone
 					tableData += `<td id = "phone-${x}"> ${jsonObject.results[i].Phone} </td>`
      
+
 					tableData += `<td> <button type="button" id="edit" onclick="editContact(${JSON.stringify(jsonObject.results[i])}, ${x});"> Edit </button></td>`
      				tableData += `<td> <button type="button" id="remove" onclick="removeContact(${x});"> Delete </button></td></tr>`
-
 				}
 				
 				document.getElementById("SearchTable").innerHTML=tableData;
