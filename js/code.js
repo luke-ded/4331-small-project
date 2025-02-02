@@ -356,7 +356,7 @@ function editContact(c, ID)
 		let updatedPhone = document.getElementById("editphoneText").value;
 		let updatedEmail = document.getElementById("editemailText").value;
 
-		console.log("Updated values:", updatedFirstName, updatedLastName, updatedPhone, updatedEmail, userId, ID); //testing
+		console.log("Updated values:" + updatedFirstName +" " + updatedLastName + " " +  updatedPhone + " " +  updatedEmail + " userd id:" + userId + "contactid: " + contactObj); //testing
 
 		let tmp = {firstName:updatedFirstName, lastName:updatedLastName, phone:updatedPhone, email:updatedEmail, userId:userId, contactId: contactObj.ContactId};
 		let jsonPayload = JSON.stringify( tmp );
