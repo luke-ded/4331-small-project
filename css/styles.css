@@ -497,6 +497,14 @@ td, th
     border: 1px solid #888;
     width: 80%; /* Could be more or less, depending on screen size */
   }
+
+  .removemodal-content p {
+    font-family: Arial, Helvetica, sans-serif;
+    color:aquamarine;
+    margin-left: 5%;
+    width:fit-content;
+    font-size: 15px;
+    }
   
   .editmodal {
     display: none; /* Hidden by default */
