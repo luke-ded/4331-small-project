@@ -49,26 +49,33 @@
               if(e.key == 'Enter') searchContact();
             }
         </script>
+        
+    <div id="tableDiv", class = "hidden">
         <h2 id = "tableHeader" class="TableHead">Results:</h2>  
-	<table>
-        <tr>
-            <th>
-                Name 
-            </th>
-            <th>
-                Email
-            </th>
-            <th>
-                Phone Number
-            </th>
-	    <th>
-		Manage Contact
-	    </th>
-        </tr>
-        <tbody id = "SearchTable"></tbody>
-        </table>
+            <table>
+                <tr>
+                    <th>
+                        Name 
+                    </th>
+                    <th>
+                        Email
+                    </th>
+                    <th>
+                        Phone Number
+                    </th>
+                <th>
+                Manage Contact
+                </th>
+                </tr>
+                <tbody id = "SearchTable"></tbody>
+                </table>
         
-        
+            </div>
+            <div id="noResultsDiv" class = "hidden">
+                <span>  
+                    No Results found!
+                </span>
+            </div>
     </div>
 </div>
 

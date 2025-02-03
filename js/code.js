@@ -411,6 +411,7 @@ function searchContact()
 	
 	let contactList = "";
 
+
 	let tmp = {search:srch,userId:userId};
 	let jsonPayload = JSON.stringify( tmp );
 	
@@ -428,11 +429,24 @@ function searchContact()
 				let tableData = "";
 				let jsonObject = JSON.parse( xhr.responseText );
 				
+				if(jsonObject.results.length == 0){
+					document.getElementById("noResultsDiv").classList.remove("hidden");
+					document.getElementById("tableDiv").classList.add("hidden");
+					
+				} else{
+					document.getElementById("tableDiv").classList.remove("hidden");
+					document.getElementById("noResultsDiv").classList.add("hidden");
+					
+					
+	
+				}
+				
 				
 				for( let i=0; i<jsonObject.results.length; i++ )
 				{	
 
 					let x = jsonObject.results[i].ContactId;
+
 					
 					//name
 					tableData += `<tr><td id = "name-${x}"> ${jsonObject.results[i].FirstName} ${jsonObject.results[i].LastName} </td>`
