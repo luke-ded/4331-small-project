@@ -442,9 +442,9 @@ function searchContact()
 					tableData += `<td id = "phone-${x}"> ${jsonObject.results[i].Phone} </td>`
      
 
-					tableData += `<td> <button type="button" id="edit" data-contact='${JSON.stringify(jsonObject.results[i])}' onclick="editContact(this, ${x});"> Edit </button></td>`
+					tableData += `<td> <button type="button" id="edit" data-contact='${JSON.stringify(jsonObject.results[i])}' onclick="editContact(this, ${x});"> Edit </button></td> <td> <button type="button" id="remove" onclick="removeContact(${x});"> Delete </button></td></tr>`
 
-     				tableData += `<td> <button type="button" id="remove" onclick="removeContact(${x});"> Delete </button></td></tr>`
+     			
 				}
 				
 				document.getElementById("SearchTable").innerHTML=tableData;
