@@ -286,7 +286,7 @@ function addContact()
 
 
 
-function removeContact(contactId)
+function removeContact(contactId, position)
 {
 
 	let modal = document.getElementById("RMmodal");
@@ -297,7 +297,7 @@ function removeContact(contactId)
 	{
 		modal.style.display = "none";
 		
-		let Index = document.getElementById("SearchTable").rowIndex;
+		let Index = position;
 		let data = document.getElementById("SearchTable").rows.item(Index).innerHTML;
 		let tmp = {userId:userId, contactId: contactId};
 		let jsonPayload = JSON.stringify( tmp );
@@ -442,7 +442,7 @@ function searchContact()
 					tableData += `<td id = "phone-${x}"> ${jsonObject.results[i].Phone} </td>`
      
 
-					tableData += `<td> <button type="button" id="edit" data-contact='${JSON.stringify(jsonObject.results[i])}' onclick="editContact(this, ${x});"> Edit </button> <button type="button" id="remove" onclick="removeContact(${x});"> Delete </button></td></tr>`
+					tableData += `<td> <button type="button" id="edit" data-contact='${JSON.stringify(jsonObject.results[i])}' onclick="editContact(this, ${x});"> Edit </button> <button type="button" id="remove" onclick="removeContact(${x}, ${i});"> Delete </button></td></tr>`
 
      			
 				}
