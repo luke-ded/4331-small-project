@@ -363,7 +363,7 @@ select
     font-family: Arial, Helvetica, sans-serif;
     white-space: pre-line;
     text-align: center;
-    color: rgb(219,171,37);
+    color: aquamarine; 
 }
 
 #contactAddResult
@@ -376,22 +376,23 @@ select
     font-size: .8em;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    color: rgb(219,171,37);
+    color: aquamarine;
 }
 
 #SearchTable
 {
-	color: rgb(219,171,37);
+	color: rgb(255, 255, 255);
 }
 
 #tableHeader
 {
-	color: rgb(238,217,196);
+	color: aquamarine; 
+
 }
 
 th
 {
-	color: rgb(238,217,196);
+	color: aquamarine; 
 }
 
 table
