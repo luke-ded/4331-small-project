@@ -396,8 +396,6 @@ function editContact(c, ID)
 
 
 
-
-
 function searchContact()
 {
 	let srch = document.getElementById("searchText").value;
@@ -428,8 +426,11 @@ function searchContact()
 			{
 				let tableData = "";
 				let jsonObject = JSON.parse( xhr.responseText );
+
+				console.log(jsonObject);
 				
-				if(jsonObject.results.length == 0){
+				if(jsonObject.error == "No Records Found"){
+					console.log("No results found, displaying noResultsDiv");
 					document.getElementById("noResultsDiv").classList.remove("hidden");
 					document.getElementById("tableDiv").classList.add("hidden");
 					
