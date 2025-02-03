@@ -358,7 +358,7 @@ function editContact(c, ID)
 
 		//console.log("Updated values:" + ID);
 
-		let tmp = {firstName:updatedFirstName, lastName:updatedLastName, phone:updatedPhone, email:updatedEmail, userId:userId, contactId: ID};
+		let tmp = {userId:userId, contactId: ID, firstName:updatedFirstName, lastName:updatedLastName, phone:updatedPhone, email:updatedEmail};
 		let jsonPayload = JSON.stringify( tmp );
 		
 		let url = urlBase + '/UpdateContact.' + extension;
