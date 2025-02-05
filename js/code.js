@@ -395,12 +395,15 @@ function editContact(c, ID)
 					document.getElementById(`email-${ID}`).innerText = `${updatedEmail}`;
 					document.getElementById(`phone-${ID}`).innerText = `${updatedPhone}`;
 
-					document.getElementById("editfirstNameText").innerHTML = updatedFirstName;
-					document.getElementById("editlastNameText").innerHTML = updatedLastName;
-					document.getElementById("editphoneText").innerHTML = updatedPhone;
-					document.getElementById("editemailText").innerHTML = updatedEmail;
-
 					modal.style.display = "none";
+					
+					document.getElementById("editfirstNameText").innerHTML = document.getElementById("editfirstNameText").value;
+					document.getElementById("editlastNameText").innerHTML = document.getElementById("editlastNameText").value;
+					document.getElementById("editphoneText").innerHTML = document.getElementById("editphoneText").value;
+					document.getElementById("editemailText").innerHTML = document.getElementById("editemailText").value;
+
+
+					
 				}
 			};
 			xhr.send(jsonPayload);
