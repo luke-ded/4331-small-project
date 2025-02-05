@@ -510,12 +510,12 @@ td, th
   .removemodal-content p {
     position: relative;
     top: -15px;
+    left: 5%;
     font-family: Arial, Helvetica, sans-serif;
     color:white; 
     margin-left: 5%;
     width:fit-content;
     font-size: 25px;
-    text-align: center;
     }
   
   .editmodal {
