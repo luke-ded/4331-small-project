@@ -517,7 +517,19 @@ td, th
     width:fit-content;
     font-size: 25px;
     }
-  
+
+
+   #delconfirm {
+	position: relative;
+	left: 15%;
+   }
+
+   #delcancel {
+	position: relative;
+	left: 25%;
+   }
+
+
   .editmodal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
