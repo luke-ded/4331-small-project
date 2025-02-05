@@ -508,6 +508,8 @@ td, th
   }
 
   .removemodal-content p {
+    position: relative;
+    top: -5px;
     font-family: Arial, Helvetica, sans-serif;
     color:aquamarine; 
     margin-left: 5%;
