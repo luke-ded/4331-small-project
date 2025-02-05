@@ -402,6 +402,11 @@ function editContact(c, ID)
 					document.getElementById("editphoneText").innerHTML = document.getElementById("editphoneText").value;
 					document.getElementById("editemailText").innerHTML = document.getElementById("editemailText").value;
 
+					console.log(document.getElementById("editfirstNameText").value);
+					console.log(document.getElementById("editlastNameText").value);
+					console.log(document.getElementById("editphoneText").value);
+					console.log(document.getElementById("editemailText").value);
+
 
 					
 				}
