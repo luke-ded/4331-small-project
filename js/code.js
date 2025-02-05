@@ -396,16 +396,14 @@ function editContact(c, ID)
 					document.getElementById(`phone-${ID}`).innerText = `${updatedPhone}`;
 
 					modal.style.display = "none";
-					
 
+					c = jsonPayload;
+	
 				}
 			};
 			xhr.send(jsonPayload);
 
-			document.getElementById("editfirstNameText").value = updatedFirstName;
-			document.getElementById("editlastNameText").value = updatedLastName;
-			document.getElementById("editphoneText").value = updatedPhone;
-			document.getElementById("editemailText").value = updatedEmail;
+			
 
 			console.log(document.getElementById("editfirstNameText").value);
 			console.log(document.getElementById("editlastNameText").value);
