@@ -376,12 +376,13 @@ function editContact(c, ID)
 					document.getElementById(`email-${ID}`).innerText = `${updatedEmail}`;
 					document.getElementById(`phone-${ID}`).innerText = `${updatedPhone}`;
 
-					document.getElementById("editfirstNameText").value = updatedFirstName;
-					document.getElementById("editlastNameText").value = updatedLastName;
-					document.getElementById("editphoneText").value = updatedPhone;
-					document.getElementById("editemailText").value = updatedEmail;
-
 					modal.style.display = "none";
+					
+					document.getElementById("editfirstNameText").innerHTML = updatedFirstName;
+					document.getElementById("editlastNameText").innerHTML = updatedLastName;
+					document.getElementById("editphoneText").innerHTML= updatedPhone;
+					document.getElementById("editemailText").innerHTML = updatedEmail;
+
 
 				}
 			};
