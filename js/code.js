@@ -397,21 +397,20 @@ function editContact(c, ID)
 
 					modal.style.display = "none";
 					
-					document.getElementById("editfirstNameText").value = updatedFirstName;
-					document.getElementById("editlastNameText").value = updatedLastName;
-					document.getElementById("editphoneText").value = updatedPhone;
-					document.getElementById("editemailText").value = updatedEmail;
 
-					console.log(document.getElementById("editfirstNameText").value);
-					console.log(document.getElementById("editlastNameText").value);
-					console.log(document.getElementById("editphoneText").value);
-					console.log(document.getElementById("editemailText").value);
-
-
-					
 				}
 			};
 			xhr.send(jsonPayload);
+
+			document.getElementById("editfirstNameText").value = updatedFirstName;
+			document.getElementById("editlastNameText").value = updatedLastName;
+			document.getElementById("editphoneText").value = updatedPhone;
+			document.getElementById("editemailText").value = updatedEmail;
+
+			console.log(document.getElementById("editfirstNameText").value);
+			console.log(document.getElementById("editlastNameText").value);
+			console.log(document.getElementById("editphoneText").value);
+			console.log(document.getElementById("editemailText").value);
 		}
 		catch(err)
 		{
