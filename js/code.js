@@ -397,11 +397,7 @@ function editContact(c, ID)
 
 					modal.style.display = "none";
 
-					const editButton = document.getElementById(`edit-${ID}`);
-                    			editButton.removeEventListener('click', editContactHandler);
-                    			editButton.addEventListener('click', function () {
-                        			editContact(jsonPayload, ID);
-                    			});
+					
 				}
 			};
 			xhr.send(jsonPayload);
