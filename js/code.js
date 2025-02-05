@@ -378,7 +378,7 @@ function editContact(c, ID)
 
 					modal.style.display = "none";
 					
-					document.getElementById("editfirstNameText").innerHTML = updatedFirstName;
+					document.getElementById("editfirstNameText").innerHTML = "Hello";
 					document.getElementById("editlastNameText").innerHTML = updatedLastName;
 					document.getElementById("editphoneText").innerHTML= updatedPhone;
 					document.getElementById("editemailText").innerHTML = updatedEmail;
