@@ -176,10 +176,7 @@
     text-align: center;
 }
 
-#tableDiv
-{
-	margin-bottom:20%;
-}
+
 
 #accessUITitle
 {
@@ -408,7 +405,7 @@ th
 table
 {
 	width: 100%;
-	margin-bottom: 5%;
+	margin-bottom: 50%;
 	border-collapse: collapse;
 	
 }
