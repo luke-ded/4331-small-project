@@ -397,10 +397,10 @@ function editContact(c, ID)
 
 					modal.style.display = "none";
 					
-					document.getElementById("editfirstNameText").innerText = document.getElementById("editfirstNameText").value;
-					document.getElementById("editlastNameText").innerText = document.getElementById("editlastNameText").value;
-					document.getElementById("editphoneText").innerText = document.getElementById("editphoneText").value;
-					document.getElementById("editemailText").innerText = document.getElementById("editemailText").value;
+					document.getElementById("editfirstNameText").value = updatedFirstName;
+					document.getElementById("editlastNameText").value = updatedLastName;
+					document.getElementById("editphoneText").value = updatedPhone;
+					document.getElementById("editemailText").value = updatedEmail;
 
 					console.log(document.getElementById("editfirstNameText").value);
 					console.log(document.getElementById("editlastNameText").value);
