@@ -232,7 +232,7 @@ function addContact()
 	document.getElementById("contactAddResult").innerHTML = "";
 
 	if (!(firstName.length != 0 && lastName.length != 0 && phone.length != 0 && email.length != 0)){
-		document.getElementById("contactAddResult").innerHTML = "One or more fields are missing!";
+		document.getElementById("contactAddResult").innerHTML = "**One or more fields are missing!**";
 
 		return;
 	}
@@ -240,14 +240,14 @@ function addContact()
 	
 	if(!validatePhone(phone))
 	{
-		document.getElementById("contactAddResult").innerHTML = "Invalid phone number!";
+		document.getElementById("contactAddResult").innerHTML = "**Invalid phone number!**";
 
 		return;
 	}
 
 	if(!validateEmail(email))
 	{
-		document.getElementById("contactAddResult").innerHTML = "Invalid email!";
+		document.getElementById("contactAddResult").innerHTML = "**Invalid email!**";
 
 		return;
 	}
@@ -356,21 +356,21 @@ function editContact(c, ID)
 		updatedEmail = document.getElementById("editemailText").value;
 
 		if (!(updatedFirstName.length != 0 && updatedLastName.length != 0 && updatedPhone.length != 0 && updatedEmail.length != 0)){
-			document.getElementById("contactAddResult").innerHTML = "One or more fields are missing!";
+			document.getElementById("contactAddResult").innerHTML = "**One or more fields are missing!**";
 
 			return;
 		}
 
 		if(!validatePhone(updatedPhone))
 		{
-			document.getElementById("contactAddResult").innerHTML = "Invalid phone number!";
+			document.getElementById("contactAddResult").innerHTML = "**Invalid phone number!**";
 
 			return;
 		}
 
 		if(!validateEmail(updatedEmail))
 		{
-			document.getElementById("contactAddResult").innerHTML = "Invalid email!";
+			document.getElementById("contactAddResult").innerHTML = "**Invalid email!**";
 
 			return;
 		}
@@ -433,7 +433,7 @@ function searchContact()
 	document.getElementById("SearchTable").innerHTML = "";
 	
 	if (srch.length == 0){
-		document.getElementById("SearchTable").innerHTML = "**No information provided!";
+		document.getElementById("SearchTable").innerHTML = "**No information provided!**";
 		return;
 	}
 
