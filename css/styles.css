@@ -404,6 +404,8 @@ th
 
 table
 {
+	position:relative;
+	top: 2%;
 	width: 100%;
 	border-collapse: collapse;
 	
