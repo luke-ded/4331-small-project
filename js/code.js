@@ -342,19 +342,39 @@ function editContact(c, ID)
 	let contactObj = JSON.parse(contactData);
 
 	//prepopulate fields
-	document.getElementById("editfirstNameText").value = contactObj.FirstName;
-	document.getElementById("editlastNameText").value = contactObj.LastName;
-	document.getElementById("editphoneText").value = contactObj.Phone;
-	document.getElementById("editemailText").value = contactObj.Email;
+	let updatedFirstName = document.getElementById("editfirstNameText").value = contactObj.FirstName;
+	let updatedLastName =document.getElementById("editlastNameText").value = contactObj.LastName;
+	let updatedPhone = document.getElementById("editphoneText").value = contactObj.Phone;
+	let updatedEmail = document.getElementById("editemailText").value = contactObj.Email;
 
-	
+	// "contactAddResult" will need to be replaced by something else
 	document.getElementById("editconfirm").onclick = function()
 	{
+		if (!(updatedFirstName.length != 0 && updatedLastName.length != 0 && updatedPhone.length != 0 && updatedEmail.length != 0)){
+			document.getElementById("contactAddResult").innerHTML = "One or more fields are missing!";
 
-		let updatedFirstName = document.getElementById("editfirstNameText").value;
-		let updatedLastName = document.getElementById("editlastNameText").value;
-		let updatedPhone = document.getElementById("editphoneText").value;
-		let updatedEmail = document.getElementById("editemailText").value;
+			return;
+		}
+
+	
+		if(!validatePhone(updatedPhone))
+		{
+			document.getElementById("contactAddResult").innerHTML = "Invalid phone number!";
+
+			return;
+		}
+
+		if(!validateEmail(updatedEmail))
+		{
+			document.getElementById("contactAddResult").innerHTML = "Invalid email!";
+
+			return;
+		}
+
+		updatedFirstName = document.getElementById("editfirstNameText").value;
+		updatedLastName = document.getElementById("editlastNameText").value;
+		updatedPhone = document.getElementById("editphoneText").value;
+		updatedEmail = document.getElementById("editemailText").value;
 
 		//console.log("Updated values:" + ID);
 
@@ -377,9 +397,6 @@ function editContact(c, ID)
 					document.getElementById(`phone-${ID}`).innerText = `${updatedPhone}`;
 
 					modal.style.display = "none";
-					
-					
-
 				}
 			};
 			xhr.send(jsonPayload);
@@ -394,7 +411,6 @@ function editContact(c, ID)
 	{
 		modal.style.display = "none";
 	};
-
 }
 
 
