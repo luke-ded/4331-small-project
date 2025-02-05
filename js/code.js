@@ -397,8 +397,8 @@ function editContact(c, ID)
 
 					modal.style.display = "none";
 
-					updateparam(jsonPayload, ID);
-	
+					document.getElementById(`edit-${ID}`).removeEventListener('click', editContact(c,ID));
+					document.getElementById(`edit-${ID}`).addEventListener('click', editContact(jsonPayload,ID));
 				}
 			};
 			xhr.send(jsonPayload);
