@@ -507,29 +507,30 @@ td, th
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 30%; /* Could be more or less, depending on screen size */
   }
 
   .removemodal-content p {
     position: relative;
     top: -15px;
-    left: 17.5%;
+
     font-family: Arial, Helvetica, sans-serif;
     color:white; 
-    margin-left: 20%;
+    margin-left: 3%;
     width:fit-content;
     font-size: 25px;
+    text-align: center;
     }
 
 
    #delconfirm {
 	position: relative;
-	left: 38%;
+	left: 28%;
    }
 
    #delcancel {
 	position: relative;
-	left: 38.2%;
+	left: 28.2%;
    }
 
 
