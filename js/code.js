@@ -350,13 +350,17 @@ function editContact(c, ID)
 	// "contactAddResult" will need to be replaced by something else
 	document.getElementById("editconfirm").onclick = function()
 	{
+		updatedFirstName = document.getElementById("editfirstNameText").value;
+		updatedLastName = document.getElementById("editlastNameText").value;
+		updatedPhone = document.getElementById("editphoneText").value;
+		updatedEmail = document.getElementById("editemailText").value;
+
 		if (!(updatedFirstName.length != 0 && updatedLastName.length != 0 && updatedPhone.length != 0 && updatedEmail.length != 0)){
 			document.getElementById("contactAddResult").innerHTML = "One or more fields are missing!";
 
 			return;
 		}
 
-	
 		if(!validatePhone(updatedPhone))
 		{
 			document.getElementById("contactAddResult").innerHTML = "Invalid phone number!";
@@ -370,11 +374,6 @@ function editContact(c, ID)
 
 			return;
 		}
-
-		updatedFirstName = document.getElementById("editfirstNameText").value;
-		updatedLastName = document.getElementById("editlastNameText").value;
-		updatedPhone = document.getElementById("editphoneText").value;
-		updatedEmail = document.getElementById("editemailText").value;
 
 		//console.log("Updated values:" + ID);
 
