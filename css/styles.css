@@ -70,7 +70,7 @@
     margin-right:20px;
     padding: 10px;
     border: 1px solid rgb(0, 157, 255);
-    border-radius: 5px;
+    border-radius: 60%;
     background-color: rgba(255, 255, 255, 0.15);
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
@@ -80,8 +80,8 @@
 .loginbutton:hover
 {
     background-color: rgba(255, 255, 255, 0.15);
-    border-color: gold;
-    color: gold;
+    border-color: rgb(0, 157, 255);
+    color: rgb(0, 157, 255);
 }
 
 #title 
