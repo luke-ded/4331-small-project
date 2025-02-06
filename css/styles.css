@@ -55,12 +55,10 @@
     margin-top: 10px;
     margin-right:20px;
     padding: 10px;
-    border: 1px;
+    border: 1px solid brown;
+    border-radius: 60%;
+    color: brown;
     background: transparent;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-image: url("../images/football.png");
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
 }
