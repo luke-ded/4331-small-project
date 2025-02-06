@@ -80,8 +80,8 @@
 .loginbutton:hover
 {
     background-color: rgba(255, 255, 255, 0.15);
-    border-color: rgb(0, 157, 255);
-    color:rgb(0, 157, 255);
+    border-color: gold;
+    color: gold;
 }
 
 #title 
@@ -153,8 +153,8 @@
 .logoutButton:hover
 {
     background-color: rgba(255, 255, 255, 0.15);
-    border-color: gold;
-    color: gold;
+    border-color: rgb(0, 157, 255);
+    color:rgb(0, 157, 255);
 }
 
 #accessUIDiv
