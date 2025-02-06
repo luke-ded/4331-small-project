@@ -485,7 +485,7 @@ function searchContact()
 
 					tableData += `<td> <button type="button" id="edit" data-contact='${JSON.stringify(jsonObject.results[i])}' onclick="editContact(this, ${x});"> Edit </button> <button type="button" id="remove" onclick="removeContact(${x}, ${i});"> Delete </button></td>`
      					
-					tableData += `<td> <img src="${teamChoice}.png" alt="NFLTeam" width="30" height="30"></td></tr>`
+					tableData += `<td> <img src="../images/${teamChoice}.png" alt="NFLTeam" width="30" height="30"></td></tr>`
 
      			
 				}
