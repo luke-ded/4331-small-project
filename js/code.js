@@ -475,17 +475,16 @@ function searchContact()
 
 					let teamChoice = Math.floor(Math.random() * 32) + 1;
 					
+					//NFL Team
+					tableData += `<tr><td> <img src="../images/${teamChoice}.png" alt="NFLTeam" width="40" height="30"></td>`
 					//name
-					tableData += `<tr><td id = "name-${x}"> ${jsonObject.results[i].FirstName} ${jsonObject.results[i].LastName} </td>`
+     					tableData += `<td id = "name-${x}"> ${jsonObject.results[i].FirstName} ${jsonObject.results[i].LastName} </td>`
 					//Email
 					tableData += `<td id = "email-${x}"> ${jsonObject.results[i].Email} </td>`
 					//Phone
 					tableData += `<td id = "phone-${x}"> ${jsonObject.results[i].Phone} </td>`
-     
-
-					tableData += `<td> <button type="button" id="edit" data-contact='${JSON.stringify(jsonObject.results[i])}' onclick="editContact(this, ${x});"> Edit </button> <button type="button" id="remove" onclick="removeContact(${x}, ${i});"> Delete </button></td>`
-     					
-					tableData += `<td> <img src="../images/${teamChoice}.png" alt="NFLTeam" width="40" height="30"></td></tr>`
+					//Managing Players
+					tableData += `<td> <button type="button" id="edit" data-contact='${JSON.stringify(jsonObject.results[i])}' onclick="editContact(this, ${x});"> Edit </button> <button type="button" id="remove" onclick="removeContact(${x}, ${i});"> Delete </button></td></tr>`
 
      			
 				}
