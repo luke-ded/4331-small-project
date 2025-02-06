@@ -57,7 +57,7 @@
     padding: 10px;
     border: 1px solid brown;
     border-radius: 60%;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-image: url("../images/football-ball.png");
     font-size: 20px;
