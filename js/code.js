@@ -473,6 +473,7 @@ function searchContact()
 
 					let x = jsonObject.results[i].ContactId;
 
+					let teamChoice = Math.floor(Math.random() * 32) + 1;
 					
 					//name
 					tableData += `<tr><td id = "name-${x}"> ${jsonObject.results[i].FirstName} ${jsonObject.results[i].LastName} </td>`
@@ -482,7 +483,9 @@ function searchContact()
 					tableData += `<td id = "phone-${x}"> ${jsonObject.results[i].Phone} </td>`
      
 
-					tableData += `<td> <button type="button" id="edit" data-contact='${JSON.stringify(jsonObject.results[i])}' onclick="editContact(this, ${x});"> Edit </button> <button type="button" id="remove" onclick="removeContact(${x}, ${i});"> Delete </button></td></tr>`
+					tableData += `<td> <button type="button" id="edit" data-contact='${JSON.stringify(jsonObject.results[i])}' onclick="editContact(this, ${x});"> Edit </button> <button type="button" id="remove" onclick="removeContact(${x}, ${i});"> Delete </button></td>`
+     					
+					tableData += `<td> <img src="${teamChoice}.png" alt="NFLTeam" width="30" height="30"></td></tr>`
 
      			
 				}
