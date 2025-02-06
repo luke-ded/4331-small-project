@@ -525,17 +525,17 @@ function validatePassword()
 
 	
 	if(symbol)
-		document.getElementById("symbolResult").style.color = "green";
+		document.getElementById("symbolResult").style.color = "rgb(51, 232, 20)";
 	else 
 		document.getElementById("symbolResult").style.color = "rgb(219,171,37)";
 
 	if(number) 
-		document.getElementById("numResult").style.color = "green";
+		document.getElementById("numResult").style.color = "rgb(51, 232, 20)";
 	else 
 		document.getElementById("numResult").style.color = "rgb(219,171,37)";
 
 	if(passwordInput.length > 7) 
-		document.getElementById("lenResult").style.color = "green";
+		document.getElementById("lenResult").style.color = "rgb(51, 232, 20)";
 	else 
 		document.getElementById("lenResult").style.color = "rgb(219,171,37)";
 
