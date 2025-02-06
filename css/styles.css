@@ -57,10 +57,10 @@
     padding: 10px;
     border: 1px solid aquamarine;
     border-radius: 60%;
-    background:none;
+    background-color: brown;
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
-    color:brown;
+    color: white;
 }
 
 .loginbuttoneng
