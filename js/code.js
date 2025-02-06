@@ -428,10 +428,10 @@ function searchContact()
 	let srch = document.getElementById("searchText").value;
 	document.getElementById("SearchTable").innerHTML = "";
 	
-	if (srch.length == 0){
+	/*if (srch.length == 0){
 		document.getElementById("SearchTable").innerHTML = "**No information provided!**";
 		return;
-	}
+	}*/
 
 	
 	let contactList = "";
