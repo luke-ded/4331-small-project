@@ -35,7 +35,7 @@
 
 .message
 {
-    position: relative;
+    position: fixed;
     top: 200px;
     right: 7%;
     text-align: center;
