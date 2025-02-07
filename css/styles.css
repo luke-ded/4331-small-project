@@ -598,3 +598,12 @@ p
     width: 80%; /* Could be more or less, depending on screen size */
   }
 
+  #editconfirm {
+	position: relative;
+	left: 28%;
+  }
+
+ #editcancel {
+	position: relative;
+	left: 28.2%;
+ }
