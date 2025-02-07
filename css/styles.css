@@ -27,7 +27,10 @@
     font-family: Bebas Nueue;
     font-weight: bold;
     font-size: 25px;
-    color:aquamarine;
+    background: linear-gradient(to right, aquamarine, gray);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .message
