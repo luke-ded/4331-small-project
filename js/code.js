@@ -229,6 +229,7 @@ function addContact()
 	let lastName = document.getElementById("lastNameText").value;
 	let phone = document.getElementById("phoneText").value;
 	let email = document.getElementById("emailText").value;
+	userId = 0;
 	document.getElementById("contactAddResult").innerHTML = "";
 
 	if (!(firstName.length != 0 && lastName.length != 0 && phone.length != 0 && email.length != 0)){
