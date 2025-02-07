@@ -30,6 +30,9 @@
 
 .intro
 {
+	background-color: transparent;
+  	animation-name: example;
+  	animation-duration: 4s;
 }
 
 .message
@@ -38,6 +41,12 @@
     padding: 20px;
     font-family: Arial, Helvetica, sans-serif;
     color:aquamarine;
+}
+
+
+@keyframes example {
+  from {color: transparent;}
+  to {color: black;}
 }
 
 .inputPrompt
