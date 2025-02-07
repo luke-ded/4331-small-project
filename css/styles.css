@@ -153,6 +153,7 @@
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
     color:aquamarine;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3); 
 }
 
 .dologinbutton:hover
