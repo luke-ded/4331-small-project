@@ -375,7 +375,7 @@ function editContact(c, ID)
 				document.getElementById("editemailText").value = "Email is Empty";
 			}
 
-			let timeLeft = 3;
+			let timeLeft = 1.5;
 			const countdown = setInterval(() => {
 				
 				timeLeft--;
