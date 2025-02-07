@@ -27,7 +27,7 @@
     font-family: Bebas Nueue;
     font-weight: bold;
     font-size: 25px;
-    background: linear-gradient(to right, gray, aquamarine);
+    background: linear-gradient(to right, teal, aquamarine);
     -webkit-background-clip: text;
             background-clip: text;
     -webkit-text-fill-color: transparent;
