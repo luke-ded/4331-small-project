@@ -360,18 +360,22 @@ function editContact(c, ID)
 
 			if (updatedFirstName.length == 0){
 				document.getElementById("editfirstNameText").value = "First Name is Empty";
+				document.getElementById("editfirstNameText").value = " ";
 			}
 
 			if (updatedLastName.length == 0){
 				document.getElementById("editlastNameText").value = "Last Name is Empty";
+				document.getElementById("editlastNameText").value = " ";
 			}
 
 			if (updatedPhone.length == 0) {
 				document.getElementById("editphoneText").value = "Phone Number is Empty";
+				document.getElementById("editphoneText").value = " ";
 			}
 
 			if (updatedEmail.length == 0){
 				document.getElementById("editemailText").value = "Email is Empty";
+				document.getElementById("editemailText").value = " ";
 			}
 			return;
 		}
