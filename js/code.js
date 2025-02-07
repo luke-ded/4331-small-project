@@ -397,7 +397,7 @@ function editContact(c, ID)
 
 					modal.style.display = "none";
 
-					
+					searchContact();
 				}
 			};
 			xhr.send(jsonPayload);
