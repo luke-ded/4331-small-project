@@ -30,7 +30,23 @@
 		    $stmt = $conn->prepare("INSERT INTO Users (Login,Password) VALUES(?,?)");
 		    $stmt->bind_param("ss", $username, $password);
 		    $stmt->execute();
-		    returnWithError("");
+
+			//getting the newly made ID
+		    $stmt = $conn->prepare("SELECT ID FROM Users WHERE Login=? AND Password=?");
+		    $stmt->bind_param("ss", $username, $password);
+		    $stmt->execute();
+			
+			//if the newly made ID is found
+			$result = $stmt->get_result();
+			if( $row = $result->fetch_assoc() )
+			{
+				//return id
+				returnWithInfo('"id":"'.$row["ID"].'"');
+			}
+			else
+			{
+				returnWithError("Newly Made ID Not Found");
+			}
 		}
 
 		$stmt->close();
