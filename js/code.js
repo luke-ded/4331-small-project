@@ -363,15 +363,15 @@ function editContact(c, ID)
 			}
 
 			if (updatedLastName.length == 0){
-				document.getElementById("editfirstNameText").value = "Last Name is Empty";
+				document.getElementById("editlastNameText").value = "Last Name is Empty";
 			}
 
 			if (updatedPhone.length == 0) {
-				document.getElementById("editfirstNameText").value = "Phone Number is Empty";
+				document.getElementById("editphoneText").value = "Phone Number is Empty";
 			}
 
 			if (updatedEmail.length == 0){
-				document.getElementById("editfirstNameText").value = "Email is Empty";
+				document.getElementById("editemailText").value = "Email is Empty";
 			}
 			return;
 		}
