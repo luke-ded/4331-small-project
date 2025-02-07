@@ -397,7 +397,7 @@ function editContact(c, ID)
 
 					modal.style.display = "none";
 
-					let document.getElementById("searchText").value = updatedFirstName + " " + updatedLastName + " " + updatedPhone + " " +  updatedEmail;
+					document.getElementById("searchText").value = updatedFirstName + " " + updatedLastName + " " + updatedPhone + " " +  updatedEmail;
 					searchContact();
 				}
 			};
