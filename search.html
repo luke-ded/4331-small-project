@@ -112,6 +112,16 @@
       <h5 class = "inputPrompt">Email </h5><h5 class="requiredStar">*</h5>
       <input type="text" id="editemailText" class = "addText" placeholder="Email: example@gmail.com">
       <script>
+	document.getElementById("editfirstNameText").onkeyup = function(e)
+        {
+          if(e.key == 'Enter') document.getElementById("editconfirm").click();
+        }
+	      
+	document.getElementById("editlastNameText").onkeyup = function(e)
+        {
+          if(e.key == 'Enter') document.getElementById("editconfirm").click();
+        }
+	      
 	document.getElementById("editphoneText").onkeyup = function(e)
         {
           if(e.key == 'Enter') document.getElementById("editconfirm").click();
@@ -121,7 +131,6 @@
         {
           if(e.key == 'Enter') document.getElementById("editconfirm").click();
         }
-	
     </script>
       <button class = "button" id = "editconfirm">Confirm</button>
       <button class = "button" id = "editcancel">Cancel</button>
