@@ -397,7 +397,17 @@ function editContact(c, ID)
 
 					modal.style.display = "none";
 
-					document.getElementById("searchText").value = updatedFirstName + " " + updatedLastName + " " + updatedPhone + " " +  updatedEmail;
+					if (updatedFirstName == contactObj.FirstName){
+						document.getElementById("searchText").value = updatedFirstName;
+					} else if (updatedLastName == contactObj.LastName){
+						document.getElementById("searchText").value = updatedLastName;
+					} else if (updatedPhone == contactObj.Phone){
+						document.getElementById("searchText").value = updatedPhone;
+					} else if (updatedEmail == contactObj.Email){
+						document.getElementById("searchText").value = updatedEmail;
+					} else {
+						document.getElementById("searchText").value = updatedFirstName;
+					}
 					searchContact();
 				}
 			};
