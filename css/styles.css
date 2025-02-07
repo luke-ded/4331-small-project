@@ -45,6 +45,7 @@
     background-color: transparent;
     animation-name: example;
     animation-duration: 5s;
+    animation-timing-function: ease-in-out;
 }
 
 
