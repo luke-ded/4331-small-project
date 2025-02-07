@@ -358,25 +358,48 @@ function editContact(c, ID)
 
 		if (!(updatedFirstName.length != 0 && updatedLastName.length != 0 && updatedPhone.length != 0 && updatedEmail.length != 0)){
 
+
 			if (updatedFirstName.length == 0){
 				document.getElementById("editfirstNameText").value = "First Name is Empty";
-				document.getElementById("editfirstNameText").value = " ";
 			}
 
 			if (updatedLastName.length == 0){
 				document.getElementById("editlastNameText").value = "Last Name is Empty";
-				document.getElementById("editlastNameText").value = " ";
 			}
 
 			if (updatedPhone.length == 0) {
 				document.getElementById("editphoneText").value = "Phone Number is Empty";
-				document.getElementById("editphoneText").value = " ";
 			}
 
 			if (updatedEmail.length == 0){
 				document.getElementById("editemailText").value = "Email is Empty";
-				document.getElementById("editemailText").value = " ";
 			}
+
+			let timeLeft = 3;
+			const countdown = setInterval(() => {
+				
+				timeLeft--;
+				if (timeLeft < 0) {
+					clearInterval(countdown);
+
+					if (document.getElementById("editfirstNameText").value ==  "First Name is Empty") {
+						document.getElementById("editfirstNameText").value = " ";
+					}
+
+					if (document.getElementById("editlastNameText").value == "Last Name is Empty"){
+						document.getElementById("editlastNameText").value = " ";
+					}
+
+					if (document.getElementById("editphoneText").value == "Phone Number is Empty") {
+						document.getElementById("editphoneText").value = " ";
+					}
+
+					if (document.getElementById("editemailText").value == "Email is Empty"){
+						document.getElementById("editemailText").value = " ";
+					}
+				}	
+			}, 1000);
+			
 			return;
 		}
 
