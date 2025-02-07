@@ -44,6 +44,7 @@
     font-family: oswald;
     font-size: 50px;
     color:aquamarine;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
     background-color: transparent;
     animation-name: example;
     animation-duration: 5s;
