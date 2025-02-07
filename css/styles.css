@@ -43,7 +43,7 @@
     font-family: oswald;
     font-size: 50px;
     font-weight: bold;
-    color: gold;
+    color: aquamarine;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
     letter-spacing: 2px;
     background-color: transparent;
@@ -55,7 +55,7 @@
 
 @keyframes example {
   from {color: transparent;}
-  to {color: gold;}
+  to {color: aquamarine;}
 }
 
 .inputPrompt
@@ -85,7 +85,7 @@
     margin-top: 10px;
     margin-right:20px;
     padding: 10px;
-    border: 1px solid brown;
+    border: 1px solid white;
     border-radius: 60%;
     color: white;
     background-color: rgb(139,0,0);
@@ -153,15 +153,16 @@
     float:right;  
     border-radius: 5px;
     margin-top:5%;
-    margin-right: 30%;
-    border: 1px solid aquamarine;
-    width:40%;
+    margin-right: 37.5%;
+    border: 1px solid white;
+    border-radius: 60%;
+    width:25%;
     padding: 10px;
-    background:transparent;
+    background:brown;
     font-size: 20px;
     font-family: Anton;
     font-weight: bold;
-    color:aquamarine;
+    color:white;
 }
 
 .dologinbutton:hover
