@@ -28,6 +28,18 @@
     color:aquamarine;
 }
 
+.intro
+{
+}
+
+.message
+{
+    width:100%;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color:aquamarine;
+}
+
 .inputPrompt
 {
     float:left;
