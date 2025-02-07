@@ -484,8 +484,8 @@ function searchContact()
 
 					let x = jsonObject.results[i].ContactId;
 
-					let teamChoice = Math.floor(Math.random() * 32) + 1;
-					
+					let teamChoice = parseInt(jsonObject.results[i].Phone) % 32;
+
 					//NFL Team
 					tableData += `<tr><td> <img src="../images/${teamChoice}.png" alt="NFLTeam" width="40" height="30"></td>`
 					//name
