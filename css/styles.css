@@ -457,7 +457,7 @@ table
 td, th
 {
 	border: 2px solid white;
-	border-style: dashed;
+	border-style: double;
   	text-align: center;
   	padding: 5px;
 }
