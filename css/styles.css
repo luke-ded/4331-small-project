@@ -598,20 +598,12 @@ p
   }
   
   /* Modal Content/Box */
-   .design {
-	background-image: url("../images/back.png");
-	width: 80%;
-    	padding: 20px;
-	filter: blur(2px);
-   	z-index: -1;
-	
-   }
-
+   
   .editmodal-content {
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid aquamarine;
-    background-color: rgba(22, 23, 33, 0.85);
+    background-image: url("../images/back.png");
     box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
     width: 80%; /* Could be more or less, depending on screen size */
   }
