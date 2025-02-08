@@ -514,11 +514,11 @@ p
 
 .button
 {
-    border-radius: 5px;
+    border-radius: 60%;
     border: 1px solid aquamarine;
-    background:transparent;
-    font-family: Arial, Helvetica, sans-serif;
-    color:aquamarine;
+    background-color: rgb(139,0,0);
+    font-family: oscar;
+    color: white;
     display:inline;
     margin-top:2%;
     margin-left: 5%;
