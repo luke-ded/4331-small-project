@@ -600,6 +600,7 @@ p
   /* Modal Content/Box */ 
   
   .editmodal-content {
+    background-image: url("../images/back.png");
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid aquamarine;
