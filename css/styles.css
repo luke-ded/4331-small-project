@@ -601,6 +601,7 @@ p
   .editmodal-content {
     background-image: url("../images/back.png");
     z-index: -1;
+    filter: blur(5px);
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
