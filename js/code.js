@@ -480,12 +480,16 @@ function searchContact()
 	let srch = document.getElementById("searchText").value;
 	document.getElementById("SearchTable").innerHTML = "";
 	
-	if (srch.length == 0){
-		document.getElementById("SearchTable").innerHTML = "**No information provided!**";
-		return;
-	}
+	if(jsonObject.error == "No Records Found"){
+		
+		document.getElementById("noResultsDiv").classList.remove("hidden");
+		document.getElementById("tableDiv").classList.add("hidden");
+					
+	} else{
+		ocument.getElementById("tableDiv").classList.remove("hidden");
+		document.getElementById("noResultsDiv").classList.add("hidden");
 
-	
+	}
 	let contactList = "";
 
 
