@@ -600,9 +600,8 @@ p
   /* Modal Content/Box */ 
   .design {
 	  position: fixed;
-	  height: 30%;
-	  width: 30%;
 	  background-image: url("../images/back.png");
+	  background-size: 30px 30px;
   }
 
 
