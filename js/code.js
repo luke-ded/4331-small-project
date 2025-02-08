@@ -508,16 +508,9 @@ function searchContact()
 
 				
 				if(jsonObject.error == "No Records Found"){
-					document.getElementById("noResultsDiv").classList.remove("hidden");
-					document.getElementById("tableDiv").classList.add("hidden");
-					
-				} else{
-					document.getElementById("tableDiv").classList.remove("hidden");
-					document.getElementById("noResultsDiv").classList.add("hidden");
-					
-					
-	
-				}
+					document.getElementById("SearchTable").innerHTML = "**No Results Found!**";
+					return;
+				} 
 				
 				
 				for( let i=0; i<jsonObject.results.length; i++ )
