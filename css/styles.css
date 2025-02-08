@@ -624,7 +624,7 @@ p
   	background-image: url("../images/back.png");
 	background-size: cover;
 	background-repeat: no-repeat;
-  	filter: blur(1px); /* Adjust blur radius as desired */
+  	filter: blur(1px); /* Adjust blur radius as desired
   	z-index: -1;
   }*/
 
