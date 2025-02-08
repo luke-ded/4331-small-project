@@ -505,6 +505,7 @@ function searchContact()
 		
 					document.getElementById("noResultsDiv").classList.remove("hidden");
 					document.getElementById("tableDiv").classList.add("hidden");
+					document.getElementById("noResultsDiv").style.display = "inline-block";
 					
 				} else	{
 					document.getElementById("tableDiv").classList.remove("hidden");
