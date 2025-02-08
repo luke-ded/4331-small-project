@@ -630,6 +630,18 @@ p
 	background-color: lavender;
   }
 
+  #editlastNameText {
+	background-color: lavender;
+  }
+
+  #editphoneText {
+	  background-color: lavender;
+  }
+
+  #editemailText {
+	  background-color: lavender;
+  }
+
   #editconfirm {
 	position: relative;
 	left: 37%;
