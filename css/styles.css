@@ -449,15 +449,15 @@ table
 	top: 5%;
 	width: 100%;
 	border-collapse: collapse;
-	border: 3px solid white;
-	border-style: dashed;
+	border: 3px solid green;
+	border-style: double;
 	
 }
 
 td, th
 {
-	border: 2px solid green;
-	border-style: double;
+	border: 2px solid white;
+	border-style: dashed;
   	text-align: center;
   	padding: 5px;
 }
