@@ -470,8 +470,8 @@ tr:nth-child(2n) td {
 }
 
 #noResultsDiv {
-	position: relative;
-	top: 5%;
+	display: flex;
+  	justify-content: center;
 	text-align: center;
 	color: rgb(255, 255, 255);
 }
