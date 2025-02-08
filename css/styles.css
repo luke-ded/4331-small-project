@@ -615,3 +615,9 @@ p
 	position: relative;
 	left: 37.2%;
  }
+
+#borderimg { 
+  border: 15px solid transparent;
+  padding: 10px;
+  border-image: url(https://upload.wikimedia.org/wikipedia/commons/c/c5/AmFBfield.svg) 50 round;
+}
