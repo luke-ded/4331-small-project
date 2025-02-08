@@ -469,6 +469,10 @@ tr:nth-child(2n) td {
     border-top: 2.5px solid white; 
 }
 
+#noResultsDiv {
+	color: rgb(255, 255, 255);
+}
+
 p
 {
 
