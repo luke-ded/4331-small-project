@@ -595,13 +595,13 @@ p
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    background-image: url("../images/back.png");
+    z-index: -1;
+    filter: blur(2px);
   }
   
   /* Modal Content/Box */
   .editmodal-content {
-    background-image: url("../images/back.png");
-    z-index: -1;
-    filter: blur(2px);
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid aquamarine;
