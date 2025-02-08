@@ -464,7 +464,7 @@ td, th
 }
 
 tr:nth-child(2n) td {
-    border-top: 4px solid white; 
+    border-top: 2.5px solid white; 
 }
 
 p
