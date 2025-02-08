@@ -605,6 +605,7 @@ p
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid aquamarine;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
     width: 80%; /* Could be more or less, depending on screen size */
   }
 
