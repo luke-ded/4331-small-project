@@ -507,7 +507,7 @@ function searchContact()
 				let jsonObject = JSON.parse( xhr.responseText );
 
 				
-				if(jsonObject.error == "No Records Found"){
+				/*if(jsonObject.error == "No Records Found"){
 					document.getElementById("noResultsDiv").classList.remove("hidden");
 					document.getElementById("tableDiv").classList.add("hidden");
 					
@@ -517,7 +517,7 @@ function searchContact()
 					
 					
 	
-				}
+				}*/
 
 				
 				for( let i=0; i<jsonObject.results.length; i++ )
@@ -551,7 +551,7 @@ function searchContact()
 	}
 	catch(err)
 	{
-		document.getElementById("SearchTable").innerHTML = err.message;
+		document.getElementById("SearchTable").innerHTML = "**No Records Found!**";
 	}
 	
 }
