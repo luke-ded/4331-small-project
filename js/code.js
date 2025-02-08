@@ -509,6 +509,7 @@ function searchContact()
 				} else	{
 					document.getElementById("tableDiv").classList.remove("hidden");
 					document.getElementById("noResultsDiv").classList.add("hidden");
+					document.getElementById("noResultsDiv").style.display = "none";
 
 				}
 
