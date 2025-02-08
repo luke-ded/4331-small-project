@@ -627,8 +627,7 @@ p
   
 
   #editfirstNameText {
-	float:left;
-	z-index: 1;
+	background-color: lavender;
   }
 
   #editconfirm {
