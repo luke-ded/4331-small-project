@@ -515,16 +515,18 @@ p
 .button
 {
     border-radius: 60%;
-    border: 1px solid aquamarine;
+    border: 1px solid white;
     background-color: rgb(139,0,0);
     font-family: oscar;
+    font-size: 20px;
+    font-weight: bold;
     color: white;
     display:inline;
     margin-top:2%;
     margin-left: 5%;
     width:fit-content;
     padding:5px;
-    font-size: 20px;
+
 
 	
 }
