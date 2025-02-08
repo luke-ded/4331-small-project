@@ -557,6 +557,7 @@ p
   /* Modal Content/Box */
   .removemodal-content {
     background-color: rgb(0, 0, 0);
+    box-shadow: 0 0 15px turquoise;
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
@@ -566,7 +567,6 @@ p
   .removemodal-content p {
     position: relative;
     top: -15px;
-    box-shadow: 0 0 15px turquoise;
     font-family: Arial, Helvetica, sans-serif;
     color:white; 
     margin-left: 3%;
