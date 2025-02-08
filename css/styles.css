@@ -601,7 +601,7 @@ p
   .design {
 	  position: fixed;
 	  background-image: url("../images/back.png");
-	  background-size: auto;
+	  background-size: inherit;
   }
 
 
