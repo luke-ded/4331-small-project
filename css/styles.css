@@ -449,8 +449,8 @@ table
 	top: 5%;
 	width: 100%;
 	border-collapse: collapse;
-	border: 3px solid green;
-	border-style: double;
+	border: 5px solid green;
+	border-style: solid;
 	
 }
 
