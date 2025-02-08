@@ -609,6 +609,10 @@ p
     width: 80%; /* Could be more or less, depending on screen size */
   }
 
+  .editfirstNameText {
+	background: transparent;
+  }
+
   #editconfirm {
 	position: relative;
 	left: 37%;
