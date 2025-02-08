@@ -598,9 +598,14 @@ p
   }
   
   /* Modal Content/Box */
+   .design {
+	background-image: url("../images/back.png");
+	filter: blur(2px);
+   	z-index: -1;
+	
+   }
+
   .editmodal-content {
-    background-image: url("../images/back.png");
-    z-index: -1;
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid aquamarine;
