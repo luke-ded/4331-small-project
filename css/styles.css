@@ -607,11 +607,12 @@ p
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid aquamarine;
+    background-color: rgb(0,0,0); 
     box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
     width: 80%; /* Could be more or less, depending on screen size */
   }
 
-  .editmodal-content::before {
+  /*.editmodal-content::before {
 	content: "";
   	position: absolute;
   	top: 0;
@@ -623,7 +624,7 @@ p
 	background-repeat: no-repeat;
   	filter: blur(1px); /* Adjust blur radius as desired */
   	z-index: -1;
-  }
+  }*/
 
   .prompt {
 	float:left;
