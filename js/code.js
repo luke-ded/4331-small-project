@@ -507,17 +507,18 @@ function searchContact()
 				let jsonObject = JSON.parse( xhr.responseText );
 
 				
-				/*if(jsonObject.error == "No Records Found"){
-					document.getElementById("noResultsDiv").classList.remove("hidden");
+				if(jsonObject.error == "No Records Found"){
+					//document.getElementById("noResultsDiv").classList.remove("hidden");
+					document.getElementById("SearchTable").innerHTML = "**No Records Found!**";
 					document.getElementById("tableDiv").classList.add("hidden");
 					
 				} else{
 					document.getElementById("tableDiv").classList.remove("hidden");
-					document.getElementById("noResultsDiv").classList.add("hidden");
+					//document.getElementById("noResultsDiv").classList.add("hidden");
 					
 					
-	
-				}*/
+
+				}
 
 				
 				for( let i=0; i<jsonObject.results.length; i++ )
