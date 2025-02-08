@@ -449,7 +449,7 @@ table
 	top: 5%;
 	width: 100%;
 	border-collapse: collapse;
-	border: 5px solid white;
+	border: 2.5px solid white;
 	border-style: solid;
 	background-color: rgba(19,168,24,0.35);
 	
@@ -464,7 +464,7 @@ td, th
 }
 
 tr:nth-child(2n) td {
-    border-top: 2px solid white; 
+    border-top: 4px solid white; 
 }
 
 p
