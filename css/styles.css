@@ -11,6 +11,8 @@
     background: linear-gradient(to top, transparent, 70%, rgb(0, 0, 0)), url("../images/stadium.jpg");
     background-position: center;
     background-size: cover;
+    background-repeat: repeat-y;
+    background-attachment: fixed; 
 }
 
 .icon
