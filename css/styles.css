@@ -585,11 +585,9 @@ p
 
   .removemodal-content p {
     position: relative;
-    left: 7%;
     top: -15px;
     font-family: oscar;
     color:white; 
-    margin-left: 3%;
     width:fit-content;
     font-size: 27px;
     font-weight: bold;
@@ -599,12 +597,12 @@ p
 
    #delconfirm {
 	position: relative;
-	left: 28%;
+	left: 20%;
    }
 
    #delcancel {
 	position: relative;
-	left: 28.2%;
+	left: 20.2%;
    }
 
 
