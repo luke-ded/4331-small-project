@@ -19,6 +19,7 @@ function doLogin()
 	let login = userName = document.getElementById("loginName").value;
 	let password = document.getElementById("loginPassword").value;
 
+	// Validate input
 	if ((login.length == 0) && (password.length == 0)) {
 		document.getElementById("loginResult").innerHTML = "**Both Username and Password are Empty!**";
 		return;
@@ -37,6 +38,7 @@ function doLogin()
 	
 	let url = urlBase + '/Login.' + extension;
 
+	// Access API
 	let xhr = new XMLHttpRequest();
 	xhr.open("POST", url, true);
 	xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
@@ -64,8 +66,6 @@ function doLogin()
 
 				document.getElementById("userName") = userName;
 			}
-			//else
-			//document.getElementById("loginResult").innerHTML = "status = " + this.status + ", readyState = " + this.readyState;
 		};
 		xhr.send(jsonPayload);
 	}
@@ -79,11 +79,10 @@ function doLogin()
 function doSignup()
 {	
 	userId = 0;
-	/* firstName = document.getElementById("firstName").value;
-	lastName = document.getElementById("lastName").value; */
 	let login = userName = document.getElementById("loginName").value;
 	let password = document.getElementById("loginPassword").value;
 
+	// Input validation
 	if ((login.length == 0) && (password.length == 0)) {
 		document.getElementById("message").innerHTML = "**Both fields are Empty!**";
 		document.getElementById("symbolResult").innerHTML = "";
@@ -125,11 +124,12 @@ function doSignup()
 	document.getElementById("numResult").innerHTML = "";
 	document.getElementById("lenResult").innerHTML = "";
 
-	let tmp = {loginName:login,password:password,/*firstName:firstName,lastName:lastName*/};
+	let tmp = {loginName:login,password:password};
 	let jsonPayload = JSON.stringify( tmp );
 	
 	let url = urlBase + '/SignUp.' + extension;
 
+	// Access API
 	let xhr = new XMLHttpRequest();
 	xhr.open("POST", url, true);
 	xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
@@ -147,9 +147,6 @@ function doSignup()
 					document.getElementById("message").innerHTML = "User already exists.";
 					return;
 				}
-		
-/* 				firstName = jsonObject.firstName;
-				lastName = jsonObject.lastName; */
 
 				saveCookie();
 	
@@ -157,8 +154,6 @@ function doSignup()
 
 				document.getElementById("userName") = userName;
 			}
-			//else
-				//document.getElementById("message").innerHTML = "status = " + this.status + ", readyState = " + this.readyState;
 		};
 		xhr.send(jsonPayload);
 	}
@@ -231,6 +226,8 @@ function addContact()
 	let email = document.getElementById("emailText").value;
 	document.getElementById("contactAddResult").innerHTML = "";
 
+
+	// Validate input
 	if (!(firstName.length != 0 && lastName.length != 0 && phone.length != 0 && email.length != 0)){
 		document.getElementById("contactAddResult").innerHTML = "**One or more fields are missing!**";
 
@@ -257,6 +254,7 @@ function addContact()
 
 	let url = urlBase + '/AddContact.' + extension;
 	
+	// Access API
 	let xhr = new XMLHttpRequest();
 	xhr.open("POST", url, true);
 	xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
@@ -288,12 +286,11 @@ function addContact()
 
 function removeContact(contactId, position)
 {
-
 	let modal = document.getElementById("RMmodal");
 
 	modal.style.display = "block"
 
-	document.getElementById("delconfirm").onclick = function() //the confirm button is pressed
+	document.getElementById("delconfirm").onclick = function() // The confirm button is pressed
 	{
 		modal.style.display = "none";
 		
@@ -341,13 +338,13 @@ function editContact(c, ID)
 	let contactData = c.getAttribute("data-contact");
 	let contactObj = JSON.parse(contactData);
 
-	//prepopulate fields
+	// Prepopulate fields
 	let updatedFirstName = document.getElementById("editfirstNameText").value = contactObj.FirstName;
 	let updatedLastName =document.getElementById("editlastNameText").value = contactObj.LastName;
 	let updatedPhone = document.getElementById("editphoneText").value = contactObj.Phone;
 	let updatedEmail = document.getElementById("editemailText").value = contactObj.Email;
 
-	// "contactAddResult" will need to be replaced by something else
+
 	document.getElementById("editconfirm").onclick = function()
 	{
 		updatedFirstName = document.getElementById("editfirstNameText").value;
@@ -355,6 +352,7 @@ function editContact(c, ID)
 		updatedPhone = document.getElementById("editphoneText").value;
 		updatedEmail = document.getElementById("editemailText").value;
 
+		// Input validation
 		if (!(updatedFirstName.length != 0 && updatedLastName.length != 0 && updatedPhone.length != 0 && updatedEmail.length != 0)){
 
 
@@ -415,8 +413,6 @@ function editContact(c, ID)
 
 			return;
 		}
-
-		//console.log("Updated values:" + ID);
 
 		let tmp = {userId:userId, contactId: ID, firstName:updatedFirstName, lastName:updatedLastName, phone:updatedPhone, email:updatedEmail};
 		let jsonPayload = JSON.stringify( tmp );
