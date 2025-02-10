@@ -474,6 +474,7 @@ tr:nth-child(2n) td {
 	display: none;
   	margin-top: 2%;
 	text-align: center;
+    font-size: .85em;
 	color: rgb(219,171,37);
 }
 
