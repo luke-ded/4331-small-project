@@ -419,11 +419,10 @@ select
 #contactAddResult
 {
     display: inline-block; 
-    margin-left: 5%;
     margin-top: 2%;
-    margin-bottom: 1%;
+    margin-bottom: 2%;
     width: 90%;
-    font-size: .8em;
+    font-size: .7em;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     color: aquamarine;
@@ -484,8 +483,8 @@ p
 	text-align: center;
 	width:100%;
    	padding: 20px;
-    	font-family: Arial, Helvetica, sans-serif;
-        color:aquamarine;
+    font-family: Arial, Helvetica, sans-serif;
+    color:aquamarine;
 	
 }
 
