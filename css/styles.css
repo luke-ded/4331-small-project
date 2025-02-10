@@ -9,10 +9,8 @@
     width:100%;
     min-height: 100vh;
     background: linear-gradient(to top, transparent, 70%, rgb(0, 0, 0)), url("../images/stadium.jpg");
-    background-position: top center;
+    background-position: center;
     background-size: auto;
-    background-repeat: repeat-y;
-    background-attachment: fixed; 
 }
 
 .icon
@@ -216,6 +214,7 @@
     box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
     font-size: 30px;
     text-align: center;
+    overflow-y:auto;
 }
 
 
